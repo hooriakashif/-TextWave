@@ -1,0 +1,614 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Create Account";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - TextWave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0508;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .page {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ===== LEFT PANEL ===== */
+        .left {
+            width: 45%;
+            background: linear-gradient(145deg, #0f0a0c, #1a0d13, #2a1520);
+            border-right: 1px solid rgba(180,95,129,0.15);
+            display: flex;
+            flex-direction: column;
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .orb1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(112,25,61,0.35) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation: glow 6s ease-in-out infinite;
+        }
+
+        .orb2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(180,95,129,0.15) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            animation: glow 8s ease-in-out infinite 3s;
+        }
+
+        @@keyframes glow {
+            0%, 100% {
+                opacity: .6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.08);
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: auto;
+        }
+
+            .logo i {
+                color: #c97a97;
+                font-size: 1.8rem;
+            }
+
+            .logo span {
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+        .lbody {
+            position: relative;
+            z-index: 2;
+            margin: auto 0;
+        }
+
+        .licon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #70193D, #B45F81);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.9rem;
+            color: #fff;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 30px rgba(112,25,61,0.45);
+        }
+
+        .lbody h2 {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .lbody > p {
+            color: #9b7a8a;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        .perks {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .perk {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .perk i {
+                color: #4ade80;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
+
+            .perk span {
+                color: #e8d5dd;
+                font-size: 0.88rem;
+            }
+
+        .quote {
+            background: rgba(42,21,32,0.65);
+            border: 1px solid rgba(180,95,129,0.2);
+            border-radius: 14px;
+            padding: 22px;
+            position: relative;
+            z-index: 2;
+            margin-top: auto;
+        }
+
+            .quote p {
+                color: #e8d5dd;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                margin-bottom: 14px;
+                font-style: italic;
+            }
+
+        .qauth {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qav {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #70193D, #B45F81);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .qauth strong {
+            display: block;
+            color: #fff;
+            font-size: 0.85rem;
+        }
+
+        .qauth span {
+            color: #9b7a8a;
+            font-size: 0.75rem;
+        }
+
+        /* ===== RIGHT PANEL ===== */
+        .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: linear-gradient(145deg, #0d0508, #150a0f);
+            overflow-y: auto;
+        }
+
+        .rinner {
+            width: 100%;
+            max-width: 440px;
+            padding: 10px 0;
+        }
+
+        .rhead {
+            margin-bottom: 28px;
+        }
+
+            .rhead h1 {
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                font-size: 2.2rem;
+                font-weight: 900;
+                margin-bottom: 8px;
+                letter-spacing: -0.02em;
+            }
+
+            .rhead p {
+                color: #9b7a8a;
+                font-size: 0.92rem;
+            }
+
+        .freebadge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(74,222,128,0.1);
+            border: 1px solid rgba(74,222,128,0.25);
+            color: #4ade80;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .errbox {
+            background: rgba(248,113,113,0.1);
+            border: 1px solid rgba(248,113,113,0.3);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #f87171;
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+        }
+
+            .errbox:empty {
+                display: none;
+            }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .flabel {
+            display: block;
+            color: #e8d5dd;
+            font-size: 0.86rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .iwrap {
+            position: relative;
+        }
+
+        .iico {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9b7a8a;
+            font-size: 0.9rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .tinput {
+            width: 100%;
+            background: rgba(42,21,32,0.5);
+            border: 1.5px solid rgba(180,95,129,0.15);
+            border-radius: 12px;
+            color: #fff;
+            padding: 14px 16px 14px 44px;
+            font-size: 0.95rem;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+            .tinput::placeholder {
+                color: #9b7a8a;
+            }
+
+            .tinput:focus {
+                border-color: #B45F81;
+                background: rgba(42,21,32,0.85);
+                box-shadow: 0 0 0 3px rgba(180,95,129,0.15);
+            }
+
+        .eyebtn {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #9b7a8a;
+            cursor: pointer;
+            padding: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+            .eyebtn:hover {
+                color: #c97a97;
+            }
+
+        .ferr {
+            display: block;
+            color: #f87171;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .checkrow {
+            margin-bottom: 20px;
+        }
+
+        .clabel {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            color: #9b7a8a;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            user-select: none;
+        }
+
+            .clabel input[type="checkbox"] {
+                display: none;
+            }
+
+        .cmark {
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid rgba(180,95,129,0.2);
+            border-radius: 5px;
+            background: rgba(42,21,32,0.6);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-top: 2px;
+        }
+
+        .clabel input:checked + .cmark {
+            background: linear-gradient(135deg, #70193D, #B45F81);
+            border-color: transparent;
+        }
+
+            .clabel input:checked + .cmark::after {
+                content: '\2713';
+                color: #fff;
+                font-size: 0.75rem;
+                font-weight: 700;
+            }
+
+        .clabel a {
+            color: #c97a97;
+        }
+
+            .clabel a:hover {
+                color: #fff;
+            }
+
+        .sbtn {
+            width: 100%;
+            background: linear-gradient(135deg, #70193D, #B45F81);
+            border: none;
+            color: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 8px 24px rgba(112,25,61,0.4);
+        }
+
+            .sbtn:hover {
+                box-shadow: 0 14px 36px rgba(112,25,61,0.65);
+                transform: translateY(-2px);
+            }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+            .divider::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: rgba(180,95,129,0.15);
+            }
+
+            .divider span {
+                background: #0d0508;
+                padding: 0 14px;
+                color: #9b7a8a;
+                font-size: 0.82rem;
+                position: relative;
+            }
+
+        .botlink {
+            text-align: center;
+            color: #9b7a8a;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+            .botlink a {
+                color: #c97a97;
+                font-weight: 600;
+            }
+
+                .botlink a:hover {
+                    color: #fff;
+                }
+
+        .secnote {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #9b7a8a;
+            font-size: 0.76rem;
+        }
+
+            .secnote i {
+                color: #4ade80;
+            }
+
+        @@media (max-width: 768px) {
+            .left {
+                display: none;
+            }
+
+            .right {
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- LEFT -->
+        <div class="left">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <a href="/" class="logo">
+                <i class="fas fa-wave-square"></i>
+                <span>TextWave</span>
+            </a>
+            <div class="lbody">
+                <div class="licon"><i class="fas fa-rocket"></i></div>
+                <h2>Start Sending SMS Today</h2>
+                <p>Join 50,000+ businesses already using TextWave to reach their customers instantly and drive real revenue.</p>
+                <div class="perks">
+                    <div class="perk"><i class="fas fa-check-circle"></i><span>100 free SMS credits on signup</span></div>
+                    <div class="perk"><i class="fas fa-check-circle"></i><span>No credit card required</span></div>
+                    <div class="perk"><i class="fas fa-check-circle"></i><span>Full API access from day one</span></div>
+                    <div class="perk"><i class="fas fa-check-circle"></i><span>Cancel anytime, no questions asked</span></div>
+                    <div class="perk"><i class="fas fa-check-circle"></i><span>99.9% uptime SLA guaranteed</span></div>
+                </div>
+            </div>
+            <div class="quote">
+                <p>"We signed up, sent our first campaign in 10 minutes and recovered 23% of abandoned carts the same day."</p>
+                <div class="qauth">
+                    <div class="qav">AL</div>
+                    <div>
+                        <strong>Aisha Larsson</strong>
+                        <span>Head of Growth, FashionBrand</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+            <div class="rinner">
+                <div class="rhead">
+                    <h1>Create Account</h1>
+                    <p>Get started in seconds — free forever</p>
+                </div>
+
+                <div class="freebadge">
+                    <i class="fas fa-gift"></i> 100 free SMS credits — no card needed
+                </div>
+
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                    <div asp-validation-summary="ModelOnly" class="errbox"></div>
+
+                    <div class="field">
+                        <label asp-for="Input.Email" class="flabel">Email Address</label>
+                        <div class="iwrap">
+                            <i class="fas fa-envelope iico"></i>
+                            <input asp-for="Input.Email" class="tinput" autocomplete="email" placeholder="you@company.com" />
+                        </div>
+                        <span asp-validation-for="Input.Email" class="ferr"></span>
+                    </div>
+
+                    <div class="field">
+                        <label asp-for="Input.Password" class="flabel">Password</label>
+                        <div class="iwrap">
+                            <i class="fas fa-lock iico"></i>
+                            <input asp-for="Input.Password" class="tinput" type="password" id="rp" autocomplete="new-password" placeholder="Min 8 characters" />
+                            <button type="button" class="eyebtn" onclick="tp('rp',this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <span asp-validation-for="Input.Password" class="ferr"></span>
+                    </div>
+
+                    <div class="field">
+                        <label asp-for="Input.ConfirmPassword" class="flabel">Confirm Password</label>
+                        <div class="iwrap">
+                            <i class="fas fa-lock iico"></i>
+                            <input asp-for="Input.ConfirmPassword" class="tinput" type="password" id="cp" autocomplete="new-password" placeholder="Repeat your password" />
+                            <button type="button" class="eyebtn" onclick="tp('cp',this)"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <span asp-validation-for="Input.ConfirmPassword" class="ferr"></span>
+                    </div>
+
+                    <div class="checkrow">
+                        <label class="clabel">
+                            <input type="checkbox" required />
+                            <span class="cmark"></span>
+                            <span>
+                                I agree to the
+                                <a href="/Home/Terms" target="_blank">Terms of Service</a> and
+                                <a href="/Home/Privacy" target="_blank">Privacy Policy</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="sbtn">
+                        <i class="fas fa-user-plus"></i> Create Free Account
+                    </button>
+                </form>
+
+                <div class="divider"><span>or</span></div>
+
+                <div class="botlink">
+                    <p>
+                        Already have an account?
+                        <a asp-page="./Login">Sign in <i class="fas fa-arrow-right"></i></a>
+                    </p>
+                </div>
+
+                <div class="secnote">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>256-bit SSL encrypted · GDPR compliant · ISO 27001 certified</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function tp(id, btn) {
+            var i = document.getElementById(id);
+            var ic = btn.querySelector('i');
+            if (i.type === 'password') { i.type = 'text'; ic.className = 'fas fa-eye-slash'; }
+            else { i.type = 'password'; ic.className = 'fas fa-eye'; }
+        }
+    </script>
+</body>
+</html>

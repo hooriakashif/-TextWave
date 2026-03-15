@@ -1,0 +1,928 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+    ViewData["ActivePage"] = "Contact";
+}
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+    <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8 animate-fadeInUp">
+                <div class="section-tag mb-3">Get In Touch</div>
+                <h1 class="page-hero-title">
+                    We'd Love to
+                    <span class="gradient-text"> Hear From You</span>
+                </h1>
+                <p class="page-hero-subtitle">
+                    Have a question, need a demo, or ready to scale?
+                    Our team is standing by 24/7 to help you succeed.
+                </p>
+                <div class="breadcrumb-tw justify-content-center mt-3">
+                    <a href="/">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i>
+                    <span>Contact Us</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT INFO CARDS ========== -->
+<section class="section-padding-sm">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6 reveal delay-1">
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h6>Email Us</h6>
+                    <p>hello@textwave.io</p>
+                    <p>support@textwave.io</p>
+                    <a href="mailto:hello@textwave.io" class="ci-link">
+                        Send Email <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal delay-2">
+                <div class="contact-info-card contact-info-featured">
+                    <div class="ci-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h6>Live Support</h6>
+                    <p>Available 24/7</p>
+                    <p>Average response: 2 mins</p>
+                    <a href="#" class="ci-link">
+                        Start Chat <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal delay-3">
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h6>Call Us</h6>
+                    <p>+1 800 123 4567</p>
+                    <p>Mon–Fri, 9am–6pm EST</p>
+                    <a href="tel:+18001234567" class="ci-link">
+                        Call Now <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal delay-4">
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h6>Visit Us</h6>
+                    <p>123 Wave Street</p>
+                    <p>San Francisco, CA 94105</p>
+                    <a href="#" class="ci-link">
+                        Get Directions <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT FORM + MAP ========== -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <!-- Contact Form -->
+            <div class="col-lg-7 reveal">
+                <div class="contact-form-card">
+                    <div class="cf-header">
+                        <div class="section-tag">Send Message</div>
+                        <h2 class="section-title mt-2">
+                            Drop Us a <span>Message</span>
+                        </h2>
+                        <p style="color:var(--gray-text);font-size:0.95rem;">
+                            Fill out the form and our team will get back to you within 2 hours.
+                        </p>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="row g-3">
+
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <label class="form-label-tw">
+                                    Full Name <span class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" class="form-control-tw with-icon"
+                                           id="fullName" placeholder="John Smith"
+                                           oninput="validateField(this)" />
+                                </div>
+                                <div class="field-error" id="fullNameError"></div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label class="form-label-tw">
+                                    Email Address <span class="required-star">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope input-icon"></i>
+                                    <input type="email" class="form-control-tw with-icon"
+                                           id="emailAddr" placeholder="john@company.com"
+                                           oninput="validateField(this)" />
+                                </div>
+                                <div class="field-error" id="emailAddrError"></div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <label class="form-label-tw">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone input-icon"></i>
+                                    <input type="tel" class="form-control-tw with-icon"
+                                           id="phoneNum" placeholder="+1 234 567 8900" />
+                                </div>
+                            </div>
+
+                            <!-- Company -->
+                            <div class="col-md-6">
+                                <label class="form-label-tw">Company Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-building input-icon"></i>
+                                    <input type="text" class="form-control-tw with-icon"
+                                           id="companyName" placeholder="Your Company" />
+                                </div>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-12">
+                                <label class="form-label-tw">
+                                    Subject <span class="required-star">*</span>
+                                </label>
+                                <div class="subject-chips">
+                                    <button type="button" class="subject-chip active"
+                                            onclick="selectSubject(this, 'General Inquiry')">
+                                        <i class="fas fa-question-circle"></i> General Inquiry
+                                    </button>
+                                    <button type="button" class="subject-chip"
+                                            onclick="selectSubject(this, 'Sales & Pricing')">
+                                        <i class="fas fa-tag"></i> Sales & Pricing
+                                    </button>
+                                    <button type="button" class="subject-chip"
+                                            onclick="selectSubject(this, 'Technical Support')">
+                                        <i class="fas fa-wrench"></i> Technical Support
+                                    </button>
+                                    <button type="button" class="subject-chip"
+                                            onclick="selectSubject(this, 'Partnership')">
+                                        <i class="fas fa-handshake"></i> Partnership
+                                    </button>
+                                    <button type="button" class="subject-chip"
+                                            onclick="selectSubject(this, 'Demo Request')">
+                                        <i class="fas fa-desktop"></i> Demo Request
+                                    </button>
+                                </div>
+                                <input type="hidden" id="selectedSubject" value="General Inquiry" />
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <label class="form-label-tw">
+                                    Message <span class="required-star">*</span>
+                                </label>
+                                <div class="textarea-wrapper">
+                                    <textarea class="form-control-tw"
+                                              id="messageText"
+                                              rows="5"
+                                              placeholder="Tell us how we can help you..."
+                                              oninput="validateField(this); updateCharCount(this)"></textarea>
+                                    <div class="char-count" id="charCount">0 / 500</div>
+                                </div>
+                                <div class="field-error" id="messageTextError"></div>
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="col-12">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" id="agreeTerms" />
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-label">
+                                        I agree to the
+                                        <a href="/Home/Privacy" style="color:var(--accent-light);">Privacy Policy</a>
+                                        and
+                                        <a href="/Home/Terms" style="color:var(--accent-light);">Terms of Service</a>
+                                    </span>
+                                </label>
+                                <div class="field-error" id="agreeTermsError"></div>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="col-12">
+                                <button type="button" class="btn-primary-tw w-100 justify-content-center"
+                                        id="submitBtn" onclick="submitContactForm()">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-5 reveal delay-2">
+
+                <!-- Response Time Card -->
+                <div class="response-card mb-4">
+                    <div class="rc-item">
+                        <div class="rc-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <strong>Lightning Fast Response</strong>
+                            <span>We reply within 2 hours on business days</span>
+                        </div>
+                    </div>
+                    <div class="rc-item">
+                        <div class="rc-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <strong>24/7 Live Chat</strong>
+                            <span>Our support team never sleeps</span>
+                        </div>
+                    </div>
+                    <div class="rc-item">
+                        <div class="rc-icon"><i class="fas fa-users"></i></div>
+                        <div>
+                            <strong>Dedicated Account Manager</strong>
+                            <span>For Professional & Enterprise plans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="hours-card mb-4">
+                    <h6 class="hours-title">
+                        <i class="fas fa-clock me-2" style="color:var(--accent-light);"></i>
+                        Office Hours
+                    </h6>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Monday – Friday</span>
+                            <strong>9:00 AM – 6:00 PM EST</strong>
+                        </div>
+                        <div class="hours-item">
+                            <span>Saturday</span>
+                            <strong>10:00 AM – 2:00 PM EST</strong>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sunday</span>
+                            <strong style="color:var(--accent-light);">Live Chat Only</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-card">
+                    <h6 class="hours-title">
+                        <i class="fas fa-share-alt me-2" style="color:var(--accent-light);"></i>
+                        Connect With Us
+                    </h6>
+                    <div class="social-links-grid">
+                        <a href="#" class="social-link-card">
+                            <i class="fab fa-twitter" style="color:#1da1f2;"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link-card">
+                            <i class="fab fa-linkedin-in" style="color:#0077b5;"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link-card">
+                            <i class="fab fa-facebook-f" style="color:#1877f2;"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link-card">
+                            <i class="fab fa-instagram" style="color:#e1306c;"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SUCCESS POPUP ========== -->
+<div class="success-overlay" id="successOverlay">
+    <div class="success-modal">
+        <div class="success-animation">
+            <div class="success-circle">
+                <i class="fas fa-check"></i>
+            </div>
+        </div>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. Our team will get back to you within 2 hours.</p>
+        <div class="success-ref">
+            Reference: <strong id="refNumber"></strong>
+        </div>
+        <button class="btn-primary-tw justify-content-center mt-4"
+                onclick="closeSuccess()">
+            <i class="fas fa-home"></i> Back to Home
+        </button>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--dark-3) 50%, var(--dark-2) 100%);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -20%;
+                width: 600px;
+                height: 600px;
+                background: radial-gradient(circle, rgba(180,95,129,0.12) 0%, transparent 70%);
+                border-radius: 50%;
+            }
+
+        .page-hero-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .page-hero-subtitle {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ===== INFO CARDS ===== */
+        .contact-info-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+            height: 100%;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .contact-info-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: var(--gradient-primary);
+                transform: scaleX(0);
+                transition: var(--transition);
+            }
+
+            .contact-info-card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(180,95,129,0.4);
+                box-shadow: var(--shadow-lg);
+            }
+
+                .contact-info-card:hover::before {
+                    transform: scaleX(1);
+                }
+
+        .contact-info-featured {
+            border-color: rgba(180,95,129,0.4);
+            background: linear-gradient(145deg, rgba(112,25,61,0.25), rgba(26,13,19,0.95));
+        }
+
+        .ci-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.3rem;
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(112,25,61,0.4);
+        }
+
+        .contact-info-card h6 {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-card p {
+            color: var(--gray-text);
+            font-size: 0.88rem;
+            margin-bottom: 4px;
+        }
+
+        .ci-link {
+            color: var(--accent-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 12px;
+            transition: var(--transition);
+        }
+
+            .ci-link:hover {
+                color: var(--white);
+                gap: 8px;
+            }
+
+        /* ===== FORM ===== */
+        .contact-form-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 48px 40px;
+        }
+
+        .cf-header {
+            margin-bottom: 36px;
+        }
+
+        .required-star {
+            color: var(--accent-light);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-text);
+            font-size: 0.9rem;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .form-control-tw.with-icon {
+            padding-left: 44px;
+        }
+
+        .textarea-wrapper {
+            position: relative;
+        }
+
+        .char-count {
+            position: absolute;
+            bottom: 12px;
+            right: 14px;
+            color: var(--gray-text);
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+
+        .form-control-tw.error {
+            border-color: #f87171 !important;
+            box-shadow: 0 0 0 3px rgba(248,113,113,0.15) !important;
+        }
+
+        .form-control-tw.success {
+            border-color: #4ade80 !important;
+            box-shadow: 0 0 0 3px rgba(74,222,128,0.12) !important;
+        }
+
+        .field-error {
+            color: #f87171;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            min-height: 18px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Subject chips */
+        .subject-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .subject-chip {
+            background: rgba(180,95,129,0.08);
+            border: 1px solid var(--border-color);
+            color: var(--gray-text);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+            .subject-chip:hover {
+                border-color: var(--accent);
+                color: var(--accent-light);
+            }
+
+            .subject-chip.active {
+                background: var(--gradient-primary);
+                border-color: transparent;
+                color: var(--white);
+                box-shadow: 0 4px 12px rgba(112,25,61,0.3);
+            }
+
+        /* Custom checkbox */
+        .custom-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+            .custom-checkbox input {
+                display: none;
+            }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 5px;
+            background: rgba(42,21,32,0.6);
+            flex-shrink: 0;
+            margin-top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .custom-checkbox input:checked + .checkmark {
+            background: var(--gradient-primary);
+            border-color: transparent;
+        }
+
+            .custom-checkbox input:checked + .checkmark::after {
+                content: '✓';
+                color: var(--white);
+                font-size: 0.75rem;
+                font-weight: 700;
+            }
+
+        .checkbox-label {
+            color: var(--gray-text);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        /* ===== RIGHT SIDE CARDS ===== */
+        .response-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .rc-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .rc-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(180,95,129,0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-light);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .rc-item strong {
+            display: block;
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .rc-item span {
+            color: var(--gray-text);
+            font-size: 0.82rem;
+        }
+
+        .hours-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+        }
+
+        .hours-title {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(180,95,129,0.06);
+            font-size: 0.88rem;
+        }
+
+            .hours-item:last-child {
+                border-bottom: none;
+            }
+
+            .hours-item span {
+                color: var(--gray-text);
+            }
+
+            .hours-item strong {
+                color: var(--white);
+            }
+
+        .social-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+        }
+
+        .social-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .social-link-card {
+            background: rgba(42,21,32,0.6);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+            .social-link-card:hover {
+                border-color: rgba(180,95,129,0.4);
+                transform: translateY(-3px);
+                background: rgba(180,95,129,0.08);
+            }
+
+            .social-link-card i {
+                font-size: 1.1rem;
+            }
+
+            .social-link-card span {
+                color: var(--light-text);
+                font-size: 0.85rem;
+                font-weight: 500;
+            }
+
+        /* ===== SUCCESS POPUP ===== */
+        .success-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 20px;
+        }
+
+            .success-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+        .success-modal {
+            background: linear-gradient(145deg, #1a0d13, #2a1520);
+            border: 1px solid rgba(180,95,129,0.3);
+            border-radius: var(--radius-xl);
+            padding: 52px 40px;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            transform: scale(0.85) translateY(30px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .success-overlay.active .success-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .success-animation {
+            margin-bottom: 28px;
+        }
+
+        .success-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: var(--white);
+            box-shadow: 0 0 40px rgba(74,222,128,0.4);
+            animation: pulse-glow-green 2s ease-in-out infinite;
+        }
+
+        @@keyframes pulse-glow-green {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(74,222,128,0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 50px rgba(74,222,128,0.6);
+            }
+        }
+
+        .success-modal h3 {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .success-modal p {
+            color: var(--gray-text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .success-ref {
+            background: rgba(180,95,129,0.1);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 10px 20px;
+            font-size: 0.88rem;
+            color: var(--gray-text);
+            display: inline-block;
+        }
+
+            .success-ref strong {
+                color: var(--accent-light);
+            }
+
+        @@media (max-width: 768px) {
+            .contact-form-card {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        let selectedSubjectVal = 'General Inquiry';
+
+        // ===== Subject chip selection =====
+        function selectSubject(el, subject) {
+            document.querySelectorAll('.subject-chip').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+            selectedSubjectVal = subject;
+            document.getElementById('selectedSubject').value = subject;
+        }
+
+        // ===== Char counter =====
+        function updateCharCount(el) {
+            const len = el.value.length;
+            const display = document.getElementById('charCount');
+            display.textContent = len + ' / 500';
+            display.style.color = len > 450 ? '#f87171' : 'var(--gray-text)';
+            if (len > 500) el.value = el.value.substring(0, 500);
+        }
+
+        // ===== Field validation =====
+        function validateField(el) {
+            const id = el.id;
+            const val = el.value.trim();
+            let error = '';
+
+            if (id === 'fullName') {
+                if (!val) error = '<i class="fas fa-exclamation-circle"></i> Full name is required';
+                else if (val.length < 2) error = '<i class="fas fa-exclamation-circle"></i> Name must be at least 2 characters';
+            }
+            if (id === 'emailAddr') {
+                if (!val) error = '<i class="fas fa-exclamation-circle"></i> Email address is required';
+                else if (!/^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/.test(val)) error = '<i class="fas fa-exclamation-circle"></i> Please enter a valid email';
+            }
+            if (id === 'messageText') {
+                if (!val) error = '<i class="fas fa-exclamation-circle"></i> Message is required';
+                else if (val.length < 10) error = '<i class="fas fa-exclamation-circle"></i> Message must be at least 10 characters';
+            }
+
+            const errorEl = document.getElementById(id + 'Error');
+            if (errorEl) errorEl.innerHTML = error;
+            el.classList.toggle('error', !!error);
+            el.classList.toggle('success', !error && val.length > 0);
+            return !error;
+        }
+
+        // ===== Form submission =====
+        function submitContactForm() {
+            const fields = ['fullName', 'emailAddr', 'messageText'];
+            let valid = true;
+
+            fields.forEach(id => {
+                const el = document.getElementById(id);
+                if (!validateField(el)) valid = false;
+            });
+
+            const agreed = document.getElementById('agreeTerms').checked;
+            if (!agreed) {
+                document.getElementById('agreeTermsError').innerHTML =
+                    '<i class="fas fa-exclamation-circle"></i> Please agree to the terms';
+                valid = false;
+            } else {
+                document.getElementById('agreeTermsError').innerHTML = '';
+            }
+
+            if (!valid) {
+                showToast('Please fix the errors before submitting.', 'error');
+                return;
+            }
+
+            // Show loading state
+            const btn = document.getElementById('submitBtn');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            // Simulate sending
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                btn.disabled = false;
+                const ref = 'TW-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+                document.getElementById('refNumber').textContent = ref;
+                document.getElementById('successOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.getElementById('contactForm').reset();
+                document.querySelectorAll('.form-control-tw').forEach(f => {
+                    f.classList.remove('success', 'error');
+                });
+                document.getElementById('charCount').textContent = '0 / 500';
+            }, 1800);
+        }
+
+        function closeSuccess() {
+            document.getElementById('successOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+            window.location.href = '/';
+        }
+
+        // Close on overlay click
+        document.getElementById('successOverlay').addEventListener('click', function(e) {
+            if (e.target === this) closeSuccess();
+        });
+    </script>
+}

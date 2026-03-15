@@ -1,0 +1,1411 @@
+﻿@{
+    ViewData["Title"] = "Pricing";
+    ViewData["ActivePage"] = "Pricing";
+}
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+    <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8 animate-fadeInUp">
+                <div class="section-tag mb-3">Simple Pricing</div>
+                <h1 class="page-hero-title">
+                    Transparent Pricing,
+                    <span class="gradient-text"> Zero Surprises</span>
+                </h1>
+                <p class="page-hero-subtitle">
+                    Start free, scale as you grow. No hidden fees, no long contracts.
+                    Pay only for what you send.
+                </p>
+                <div class="breadcrumb-tw justify-content-center mt-3">
+                    <a href="/">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i>
+                    <span>Pricing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BILLING TOGGLE ========== -->
+<section class="section-padding-sm">
+    <div class="container">
+        <div class="billing-toggle-wrapper reveal">
+            <span class="billing-label" id="lblMonthly">Monthly</span>
+            <div class="billing-toggle" id="billingToggle">
+                <div class="billing-toggle-thumb"></div>
+            </div>
+            <span class="billing-label" id="lblAnnual">
+                Annual
+                <span class="save-badge">Save 20%</span>
+            </span>
+        </div>
+
+        <!-- ===== PRICING CARDS ===== -->
+        <div class="row g-4 mt-2 justify-content-center">
+
+            <!-- Starter -->
+            <div class="col-lg-4 col-md-6 reveal delay-1">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><i class="fas fa-seedling"></i></div>
+                        <h4 class="pricing-plan">Starter</h4>
+                        <p class="pricing-desc">Perfect for small businesses getting started</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" data-monthly="29" data-annual="23">29</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="price-annual-note" id="annualNote1"></p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>5,000 SMS / month</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>1 Sender ID</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Basic Analytics</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Email Support</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>API Access</span></div>
+                        <div class="pf-item pf-no"><i class="fas fa-times"></i><span>Two-Way SMS</span></div>
+                        <div class="pf-item pf-no"><i class="fas fa-times"></i><span>Dedicated Account Manager</span></div>
+                        <div class="pf-item pf-no"><i class="fas fa-times"></i><span>Custom Integrations</span></div>
+                    </div>
+                    <button class="btn-pricing" onclick="handlePlanSelect('Starter')">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </button>
+                </div>
+            </div>
+
+            <!-- Professional (Featured) -->
+            <div class="col-lg-4 col-md-6 reveal delay-2">
+                <div class="pricing-card pricing-featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><i class="fas fa-bolt"></i></div>
+                        <h4 class="pricing-plan">Professional</h4>
+                        <p class="pricing-desc">For growing businesses that need more power</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" data-monthly="79" data-annual="63">79</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="price-annual-note" id="annualNote2"></p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>25,000 SMS / month</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>5 Sender IDs</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Advanced Analytics</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Priority Support 24/7</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>API Access</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Two-Way SMS</span></div>
+                        <div class="pf-item pf-no"><i class="fas fa-times"></i><span>Dedicated Account Manager</span></div>
+                        <div class="pf-item pf-no"><i class="fas fa-times"></i><span>Custom Integrations</span></div>
+                    </div>
+                    <button class="btn-pricing btn-pricing-featured" onclick="handlePlanSelect('Professional')">
+                        <i class="fas fa-bolt"></i> Get Started
+                    </button>
+                </div>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="col-lg-4 col-md-6 reveal delay-3">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><i class="fas fa-building"></i></div>
+                        <h4 class="pricing-plan">Enterprise</h4>
+                        <p class="pricing-desc">For large scale operations with custom needs</p>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" data-monthly="199" data-annual="159">199</span>
+                            <span class="price-period">/mo</span>
+                        </div>
+                        <p class="price-annual-note" id="annualNote3"></p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Unlimited SMS</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Unlimited Sender IDs</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Custom Analytics</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Dedicated Support</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>API Access</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Two-Way SMS</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Dedicated Account Manager</span></div>
+                        <div class="pf-item pf-yes"><i class="fas fa-check"></i><span>Custom Integrations</span></div>
+                    </div>
+                    <button class="btn-pricing" onclick="handlePlanSelect('Enterprise')">
+                        <i class="fas fa-crown"></i> Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SMS CALCULATOR ========== -->
+<section class="section-padding calc-section">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-tag">SMS Calculator</div>
+            <h2 class="section-title">Calculate Your <span>Exact Cost</span></h2>
+            <p class="section-subtitle">Slide to see exactly what you'll pay. No surprises ever.</p>
+        </div>
+        <div class="calculator-card reveal">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="calc-field">
+                        <div class="calc-label-row">
+                            <label class="form-label-tw">Number of SMS per month</label>
+                            <span class="calc-value-display" id="smsCountDisplay">10,000</span>
+                        </div>
+                        <input type="range" class="calc-slider" id="smsSlider"
+                               min="1000" max="500000" step="1000" value="10000" />
+                        <div class="calc-range-labels">
+                            <span>1K</span><span>500K</span>
+                        </div>
+                    </div>
+                    <div class="calc-field mt-4">
+                        <div class="calc-label-row">
+                            <label class="form-label-tw">Select Country</label>
+                            <span class="calc-value-display" id="rateDisplay">$0.025/SMS</span>
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select-trigger" id="selectTrigger" onclick="toggleDropdown()">
+                                <span class="cs-flag">🇺🇸</span>
+                                <span class="cs-name">United States</span>
+                                <span class="cs-rate">$0.025/SMS</span>
+                                <i class="fas fa-chevron-down cs-arrow"></i>
+                            </div>
+                            <div class="custom-select-dropdown" id="selectDropdown">
+                                <div class="cs-search-wrapper">
+                                    <i class="fas fa-search cs-search-icon"></i>
+                                    <input type="text" class="cs-search" id="csSearch"
+                                           placeholder="Search country..."
+                                           oninput="filterCountries(this.value)" />
+                                </div>
+                                <div class="cs-options" id="csOptions">
+                                    <!-- Populated by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="calc-result">
+                        <div class="calc-result-orb"></div>
+                        <p class="calc-result-label">Estimated Monthly Cost</p>
+                        <div class="calc-result-amount" id="calcResult">$250.00</div>
+                        <div class="calc-result-breakdown">
+                            <div class="crb-item">
+                                <span>SMS Count</span>
+                                <strong id="crb-count">10,000</strong>
+                            </div>
+                            <div class="crb-item">
+                                <span>Rate per SMS</span>
+                                <strong id="crb-rate">$0.025</strong>
+                            </div>
+                            <div class="crb-item">
+                                <span>Volume Discount</span>
+                                <strong id="crb-discount" style="color:#4ade80;">-0%</strong>
+                            </div>
+                        </div>
+                        <button class="btn-primary-tw w-100 mt-4" onclick="handlePlanSelect('Custom')">
+                            <i class="fas fa-paper-plane"></i> Get This Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PAYMENT METHODS ========== -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-tag">Payment Methods</div>
+            <h2 class="section-title">We Accept <span>All Major</span> Payments</h2>
+            <p class="section-subtitle">Secure, fast and flexible payment options for every business.</p>
+        </div>
+        <div class="payment-grid reveal">
+            <div class="payment-card" onclick="handlePayment('Visa')">
+                <i class="fab fa-cc-visa payment-icon" style="color:#1a1f71;"></i>
+                <span>Visa</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Mastercard')">
+                <i class="fab fa-cc-mastercard payment-icon" style="color:#eb001b;"></i>
+                <span>Mastercard</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('PayPal')">
+                <i class="fab fa-cc-paypal payment-icon" style="color:#003087;"></i>
+                <span>PayPal</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Stripe')">
+                <i class="fab fa-cc-stripe payment-icon" style="color:#6772e5;"></i>
+                <span>Stripe</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Apple Pay')">
+                <i class="fab fa-apple payment-icon" style="color:#a2aaad;"></i>
+                <span>Apple Pay</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Google Pay')">
+                <i class="fab fa-google-pay payment-icon" style="color:#4285f4;"></i>
+                <span>Google Pay</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('American Express')">
+                <i class="fab fa-cc-amex payment-icon" style="color:#2e77bc;"></i>
+                <span>Amex</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Discover')">
+                <i class="fab fa-cc-discover payment-icon" style="color:#f76f20;"></i>
+                <span>Discover</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('JCB')">
+                <i class="fab fa-cc-jcb payment-icon" style="color:#003087;"></i>
+                <span>JCB</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Diners Club')">
+                <i class="fab fa-cc-diners-club payment-icon" style="color:#004b87;"></i>
+                <span>Diners Club</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Bitcoin')">
+                <i class="fab fa-bitcoin payment-icon" style="color:#f7931a;"></i>
+                <span>Bitcoin</span>
+            </div>
+            <div class="payment-card" onclick="handlePayment('Bank Transfer')">
+                <i class="fas fa-university payment-icon" style="color:var(--accent-light);"></i>
+                <span>Bank Transfer</span>
+            </div>
+        </div>
+        <p class="text-center mt-4" style="color:var(--gray-text);font-size:0.88rem;">
+            <i class="fas fa-lock me-2" style="color:#4ade80;"></i>
+            All transactions are secured with 256-bit SSL encryption
+        </p>
+    </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section-padding faq-section">
+    <div class="container">
+        <div class="text-center mb-5 reveal">
+            <div class="section-tag">FAQ</div>
+            <h2 class="section-title">Pricing <span>Questions Answered</span></h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 reveal">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I change my plan anytime?</span>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and we'll prorate any billing differences automatically.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is there a free trial?</span>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Sign up for free and get 100 SMS credits instantly — no credit card required. Test the full platform before committing to a plan.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>What happens if I exceed my SMS limit?</span>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We'll notify you when you reach 80% of your limit. If you exceed it, additional SMS are charged at our standard per-SMS rate for your plan — no service interruptions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Are there any setup fees or contracts?</span>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Zero setup fees and zero long-term contracts. All plans are month-to-month. Cancel anytime with no penalties whatsoever.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Do you offer refunds?</span>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day money-back guarantee on all paid plans. If you're not satisfied, contact our support team and we'll process a full refund — no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== AUTH MODAL ========== -->
+<div class="auth-modal-overlay" id="authModal">
+    <div class="auth-modal">
+        <button class="auth-modal-close" onclick="closeAuthModal()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="auth-modal-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <h3 class="auth-modal-title">Login Required</h3>
+        <p class="auth-modal-desc">
+            You need to be logged in to select a plan or make a payment.
+            Join thousands of businesses already using TextWave!
+        </p>
+        <div class="auth-modal-plan" id="selectedPlanDisplay"></div>
+        <div class="auth-modal-actions">
+            <a href="/Identity/Account/Login" class="btn-primary-tw w-100 justify-content-center mb-3">
+                <i class="fas fa-sign-in-alt"></i> Sign In to Continue
+            </a>
+            <a href="/Identity/Account/Register" class="btn-outline-tw w-100 justify-content-center">
+                <i class="fas fa-user-plus"></i> Create Free Account
+            </a>
+        </div>
+        <p class="auth-modal-footer">
+            <i class="fas fa-shield-alt me-1" style="color:#4ade80;"></i>
+            Free account includes 100 SMS credits — no credit card needed
+        </p>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--dark-3) 50%, var(--dark-2) 100%);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -20%;
+                width: 600px;
+                height: 600px;
+                background: radial-gradient(circle, rgba(180,95,129,0.12) 0%, transparent 70%);
+                border-radius: 50%;
+            }
+
+        .page-hero-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .page-hero-subtitle {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ===== BILLING TOGGLE ===== */
+        .billing-toggle-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .billing-label {
+            color: var(--light-text);
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .billing-toggle {
+            width: 56px;
+            height: 28px;
+            background: rgba(180,95,129,0.2);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+
+            .billing-toggle.annual {
+                background: var(--gradient-primary);
+                border-color: transparent;
+            }
+
+        .billing-toggle-thumb {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .billing-toggle.annual .billing-toggle-thumb {
+            left: 31px;
+        }
+
+        .save-badge {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            color: #0f2d1a;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        /* ===== PRICING CARDS ===== */
+        .pricing-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            position: relative;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+            .pricing-card:hover {
+                transform: translateY(-10px);
+                border-color: rgba(180,95,129,0.4);
+                box-shadow: var(--shadow-lg);
+            }
+
+        .pricing-featured {
+            border-color: rgba(180,95,129,0.5);
+            background: linear-gradient(145deg, rgba(112,25,61,0.3), rgba(26,13,19,0.95));
+            transform: scale(1.03);
+        }
+
+            .pricing-featured:hover {
+                transform: scale(1.03) translateY(-10px);
+            }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(112,25,61,0.4);
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 28px;
+        }
+
+        .pricing-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(180,95,129,0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: var(--accent-light);
+            font-size: 1.4rem;
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover .pricing-icon {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        .pricing-plan {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .pricing-desc {
+            color: var(--gray-text);
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .price-currency {
+            color: var(--accent-light);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .price-amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .price-period {
+            color: var(--gray-text);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .price-annual-note {
+            color: #4ade80;
+            font-size: 0.8rem;
+            margin-top: 6px;
+            min-height: 20px;
+        }
+
+        .pricing-features {
+            margin-bottom: 28px;
+        }
+
+        .pf-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(180,95,129,0.06);
+            font-size: 0.9rem;
+        }
+
+        .pf-yes i {
+            color: #4ade80;
+            font-size: 0.8rem;
+        }
+
+        .pf-yes span {
+            color: var(--light-text);
+        }
+
+        .pf-no i {
+            color: rgba(180,95,129,0.3);
+            font-size: 0.8rem;
+        }
+
+        .pf-no span {
+            color: var(--gray-text);
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .btn-pricing {
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-xl);
+            border: 1.5px solid var(--accent);
+            background: transparent;
+            color: var(--accent-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+            .btn-pricing:hover {
+                background: rgba(180,95,129,0.15);
+                color: var(--white);
+                transform: translateY(-2px);
+            }
+
+        .btn-pricing-featured {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(112,25,61,0.4);
+        }
+
+            .btn-pricing-featured:hover {
+                box-shadow: 0 10px 30px rgba(112,25,61,0.6);
+                background: var(--gradient-primary);
+            }
+
+        /* ===== CALCULATOR ===== */
+        .calc-section {
+            background: rgba(42,21,32,0.2);
+        }
+
+        .calculator-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 50px;
+        }
+
+        .calc-label-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .calc-value-display {
+            color: var(--accent-light);
+            font-weight: 700;
+            font-size: 1rem;
+            background: rgba(180,95,129,0.1);
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .calc-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            appearance: none;
+            background: linear-gradient(90deg, var(--accent) 0%, rgba(180,95,129,0.2) 0%);
+            outline: none;
+            cursor: pointer;
+        }
+
+            .calc-slider::-webkit-slider-thumb {
+                appearance: none;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: var(--gradient-primary);
+                cursor: pointer;
+                border: 3px solid var(--white);
+                box-shadow: 0 2px 10px rgba(112,25,61,0.5);
+                transition: var(--transition);
+            }
+
+                .calc-slider::-webkit-slider-thumb:hover {
+                    transform: scale(1.2);
+                }
+
+        .calc-range-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            color: var(--gray-text);
+            font-size: 0.8rem;
+        }
+
+        .calc-result {
+            background: linear-gradient(145deg, rgba(112,25,61,0.3), rgba(42,21,32,0.9));
+            border: 1px solid rgba(180,95,129,0.3);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calc-result-orb {
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(180,95,129,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .calc-result-label {
+            color: var(--gray-text);
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+        }
+
+        .calc-result-amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .calc-result-breakdown {
+            background: rgba(0,0,0,0.2);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .crb-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(180,95,129,0.08);
+            font-size: 0.88rem;
+        }
+
+            .crb-item:last-child {
+                border-bottom: none;
+            }
+
+            .crb-item span {
+                color: var(--gray-text);
+            }
+
+            .crb-item strong {
+                color: var(--white);
+            }
+
+        /* ===== PAYMENT METHODS ===== */
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+
+        @@media (max-width: 992px) {
+            .payment-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @@media (max-width: 600px) {
+            .payment-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .payment-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+            .payment-card:hover {
+                transform: translateY(-6px);
+                border-color: rgba(180,95,129,0.4);
+                box-shadow: var(--shadow-md);
+            }
+
+        .payment-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .payment-card span {
+            color: var(--gray-text);
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: rgba(42,21,32,0.15);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+            .faq-item:hover {
+                border-color: rgba(180,95,129,0.3);
+            }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-align: left;
+            gap: 16px;
+            transition: var(--transition);
+        }
+
+            .faq-question:hover {
+                color: var(--accent-light);
+            }
+
+        .faq-icon {
+            color: var(--accent-light);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+            .faq-answer p {
+                padding: 0 24px 20px;
+                color: var(--gray-text);
+                line-height: 1.8;
+                font-size: 0.92rem;
+                margin: 0;
+            }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        /* ===== AUTH MODAL ===== */
+        .auth-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 20px;
+        }
+
+            .auth-modal-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+        .auth-modal {
+            background: linear-gradient(145deg, #1a0d13, #2a1520);
+            border: 1px solid rgba(180,95,129,0.3);
+            border-radius: var(--radius-xl);
+            padding: 48px 40px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            transform: scale(0.9) translateY(20px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .auth-modal-overlay.active .auth-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .auth-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(180,95,129,0.1);
+            border: 1px solid var(--border-color);
+            color: var(--gray-text);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+
+            .auth-modal-close:hover {
+                background: rgba(180,95,129,0.25);
+                color: var(--white);
+            }
+
+        .auth-modal-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--white);
+            box-shadow: 0 8px 24px rgba(112,25,61,0.5);
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .auth-modal-title {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .auth-modal-desc {
+            color: var(--gray-text);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .auth-modal-plan {
+            display: inline-block;
+            background: rgba(180,95,129,0.12);
+            border: 1px solid rgba(180,95,129,0.3);
+            color: var(--accent-light);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            min-height: 32px;
+        }
+
+        .auth-modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .auth-modal-footer {
+            color: var(--gray-text);
+            font-size: 0.82rem;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        @@media (max-width: 480px) {
+            .auth-modal {
+                padding: 36px 24px;
+            }
+
+            .calculator-card {
+                padding: 30px 20px;
+            }
+        }
+        /* ===== CUSTOM COUNTRY SELECT ===== */
+        .custom-select-wrapper {
+            position: relative;
+        }
+
+        .custom-select-trigger {
+            background: rgba(42,21,32,0.6);
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+            .custom-select-trigger:hover,
+            .custom-select-trigger.open {
+                border-color: var(--accent);
+                background: rgba(42,21,32,0.9);
+                box-shadow: 0 0 0 3px rgba(180,95,129,0.15);
+            }
+
+        .cs-flag {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        .cs-name {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .cs-rate {
+            color: var(--accent-light);
+            font-size: 0.82rem;
+            font-weight: 600;
+            background: rgba(180,95,129,0.1);
+            padding: 2px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .cs-arrow {
+            color: var(--gray-text);
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .custom-select-trigger.open .cs-arrow {
+            transform: rotate(180deg);
+            color: var(--accent-light);
+        }
+
+        .custom-select-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: #1a0d13;
+            border: 1px solid rgba(180,95,129,0.3);
+            border-radius: var(--radius-md);
+            z-index: 500;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0.25s;
+            box-shadow: var(--shadow-lg);
+        }
+
+            .custom-select-dropdown.open {
+                max-height: 320px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+        .cs-search-wrapper {
+            position: relative;
+            padding: 12px 12px 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cs-search-icon {
+            position: absolute;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-30%);
+            color: var(--gray-text);
+            font-size: 0.8rem;
+        }
+
+        .cs-search {
+            width: 100%;
+            background: rgba(42,21,32,0.8);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--white);
+            padding: 8px 12px 8px 32px;
+            font-size: 0.88rem;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+            .cs-search::placeholder {
+                color: var(--gray-text);
+            }
+
+            .cs-search:focus {
+                border-color: var(--accent);
+            }
+
+        .cs-options {
+            overflow-y: auto;
+            max-height: 230px;
+        }
+
+            .cs-options::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .cs-options::-webkit-scrollbar-thumb {
+                background: var(--accent);
+                border-radius: 2px;
+            }
+
+        .cs-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+            .cs-option:hover {
+                background: rgba(180,95,129,0.1);
+            }
+
+            .cs-option.selected {
+                background: rgba(180,95,129,0.15);
+            }
+
+        .cs-opt-flag {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .cs-opt-name {
+            color: var(--white);
+            font-size: 0.9rem;
+            flex: 1;
+        }
+
+        .cs-opt-rate {
+            color: var(--accent-light);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .cs-no-result {
+            text-align: center;
+            color: var(--gray-text);
+            padding: 20px;
+            font-size: 0.88rem;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        const isLoggedIn = '@User.Identity.IsAuthenticated.ToString().ToLower()' === 'true';
+
+        // ===== Auth Modal =====
+        function handlePlanSelect(planName) {
+            if (!isLoggedIn) {
+                document.getElementById('selectedPlanDisplay').textContent = '📦 Selected: ' + planName + ' Plan';
+                document.getElementById('authModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                showToast('Redirecting to ' + planName + ' plan setup...', 'success');
+            }
+        }
+
+        function handlePayment(method) {
+               if (!isLoggedIn) {
+                   document.getElementById('selectedPlanDisplay').textContent = '💳 Payment via: ' + method;
+                   document.getElementById('authModal').classList.add('active');
+                   document.body.style.overflow = 'hidden';
+               } else {
+                   var urls = {
+                       'Visa':             'https://www.visa.com',
+                       'Mastercard':       'https://www.mastercard.com',
+                       'PayPal':           'https://www.paypal.com/checkoutnow',
+                       'Stripe':           'https://buy.stripe.com',
+                       'Apple Pay':        'https://www.apple.com/apple-pay',
+                       'Google Pay':       'https://pay.google.com',
+                       'American Express': 'https://www.americanexpress.com',
+                       'Discover':         'https://www.discover.com',
+                       'JCB':              'https://www.jcbcorporate.com',
+                       'Diners Club':      'https://www.dinersclub.com',
+                       'Bitcoin':          'https://commerce.coinbase.com',
+                       'Bank Transfer':    'https://wise.com/send-money'
+                   };
+                   var url = urls[method];
+                   if (url) {
+                       showToast('Opening ' + method + ' — redirecting...', 'success');
+                       setTimeout(function() {
+                           window.open(url, '_blank');
+                       }, 800);
+                   }
+               }
+           }
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('authModal').addEventListener('click', function(e) {
+            if (e.target === this) closeAuthModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeAuthModal();
+        });
+
+        // ===== Billing Toggle =====
+        const toggle = document.getElementById('billingToggle');
+        let isAnnual = false;
+        toggle.addEventListener('click', () => {
+            isAnnual = !isAnnual;
+            toggle.classList.toggle('annual', isAnnual);
+            document.querySelectorAll('.price-amount').forEach((el) => {
+                el.textContent = isAnnual ? el.getAttribute('data-annual') : el.getAttribute('data-monthly');
+            });
+            const notes = ['annualNote1','annualNote2','annualNote3'];
+            const amounts = [23, 63, 159];
+            notes.forEach((id, i) => {
+                document.getElementById(id).textContent = isAnnual ? `Billed annually ($${amounts[i] * 12}/yr)` : '';
+            });
+        });
+
+        // ===== Countries Data =====
+        const countries = [
+            { flag: '🇺🇸', name: 'United States',    rate: 0.025, currency: 'USD', symbol: '$'   },
+            { flag: '🇬🇧', name: 'United Kingdom',    rate: 0.030, currency: 'GBP', symbol: '£'   },
+            { flag: '🇵🇰', name: 'Pakistan',           rate: 8.50,  currency: 'PKR', symbol: '₨'   },
+            { flag: '🇮🇳', name: 'India',              rate: 2.10,  currency: 'INR', symbol: '₹'   },
+            { flag: '🇦🇺', name: 'Australia',          rate: 0.038, currency: 'AUD', symbol: 'A$'  },
+            { flag: '🇨🇦', name: 'Canada',             rate: 0.034, currency: 'CAD', symbol: 'C$'  },
+            { flag: '🇩🇪', name: 'Germany',            rate: 0.075, currency: 'EUR', symbol: '€'   },
+            { flag: '🇫🇷', name: 'France',             rate: 0.065, currency: 'EUR', symbol: '€'   },
+            { flag: '🇦🇪', name: 'UAE',                rate: 0.100, currency: 'AED', symbol: 'د.إ' },
+            { flag: '🇸🇦', name: 'Saudi Arabia',       rate: 0.090, currency: 'SAR', symbol: '﷼'   },
+            { flag: '🇧🇩', name: 'Bangladesh',         rate: 0.45,  currency: 'BDT', symbol: '৳'   },
+            { flag: '🇳🇬', name: 'Nigeria',            rate: 4.20,  currency: 'NGN', symbol: '₦'   },
+            { flag: '🇧🇷', name: 'Brazil',             rate: 0.125, currency: 'BRL', symbol: 'R$'  },
+            { flag: '🇲🇽', name: 'Mexico',             rate: 0.480, currency: 'MXN', symbol: '$'   },
+            { flag: '🇿🇦', name: 'South Africa',       rate: 0.450, currency: 'ZAR', symbol: 'R'   },
+            { flag: '🇸🇬', name: 'Singapore',          rate: 0.033, currency: 'SGD', symbol: 'S$'  },
+            { flag: '🇯🇵', name: 'Japan',              rate: 2.80,  currency: 'JPY', symbol: '¥'   },
+            { flag: '🇨🇳', name: 'China',              rate: 0.043, currency: 'CNY', symbol: '¥'   },
+            { flag: '🇰🇷', name: 'South Korea',        rate: 28.00, currency: 'KRW', symbol: '₩'   },
+            { flag: '🇹🇷', name: 'Turkey',             rate: 0.680, currency: 'TRY', symbol: '₺'   },
+            { flag: '🇮🇩', name: 'Indonesia',          rate: 375.0, currency: 'IDR', symbol: 'Rp'  },
+            { flag: '🇵🇭', name: 'Philippines',        rate: 1.40,  currency: 'PHP', symbol: '₱'   },
+            { flag: '🇲🇾', name: 'Malaysia',           rate: 0.115, currency: 'MYR', symbol: 'RM'  },
+            { flag: '🇪🇬', name: 'Egypt',              rate: 0.780, currency: 'EGP', symbol: 'E£'  },
+            { flag: '🇦🇷', name: 'Argentina',          rate: 25.00, currency: 'ARS', symbol: '$'   },
+        ];
+
+        let selectedCountry = countries[0];
+
+        // Build dropdown options
+        function buildOptions(list) {
+            const container = document.getElementById('csOptions');
+            container.innerHTML = '';
+            if (list.length === 0) {
+                container.innerHTML = '<div class="cs-no-result">No country found</div>';
+                return;
+            }
+            list.forEach((c, i) => {
+                const div = document.createElement('div');
+                div.className = 'cs-option' + (c.name === selectedCountry.name ? ' selected' : '');
+                div.innerHTML = `
+                    <span class="cs-opt-flag">${c.flag}</span>
+                    <span class="cs-opt-name">${c.name}</span>
+                    <span class="cs-opt-rate">${c.symbol}${c.rate.toLocaleString()}/SMS</span>
+                `;
+                div.addEventListener('click', () => selectCountry(c));
+                container.appendChild(div);
+            });
+        }
+
+        function selectCountry(c) {
+            selectedCountry = c;
+            document.querySelector('.cs-flag').textContent = c.flag;
+            document.querySelector('.cs-name').textContent = c.name;
+            document.querySelector('.cs-rate').textContent = c.symbol + c.rate.toLocaleString() + '/SMS';
+            document.getElementById('csSearch').value = '';
+            buildOptions(countries);
+            closeDropdown();
+            updateCalculator();
+        }
+
+        function toggleDropdown() {
+            const dd = document.getElementById('selectDropdown');
+            const trigger = document.getElementById('selectTrigger');
+            const isOpen = dd.classList.contains('open');
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                dd.classList.add('open');
+                trigger.classList.add('open');
+                setTimeout(() => document.getElementById('csSearch').focus(), 100);
+            }
+        }
+
+        function closeDropdown() {
+            document.getElementById('selectDropdown').classList.remove('open');
+            document.getElementById('selectTrigger').classList.remove('open');
+        }
+
+        function filterCountries(val) {
+            const filtered = countries.filter(c => c.name.toLowerCase().includes(val.toLowerCase()));
+            buildOptions(filtered);
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.custom-select-wrapper')) closeDropdown();
+        });
+
+        // ===== SMS Calculator =====
+        const slider = document.getElementById('smsSlider');
+
+        function updateCalculator() {
+            const count = parseInt(slider.value);
+            const c = selectedCountry;
+
+            let discount = 0;
+            if (count >= 100000) discount = 20;
+            else if (count >= 50000) discount = 15;
+            else if (count >= 25000) discount = 10;
+            else if (count >= 10000) discount = 5;
+
+            const rawCost = count * c.rate;
+            const finalCost = rawCost * (1 - discount / 100);
+
+            // Format number nicely
+            const formatted = finalCost >= 1000
+                ? finalCost.toLocaleString('en', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                : finalCost.toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+            document.getElementById('smsCountDisplay').textContent = count.toLocaleString();
+            document.getElementById('rateDisplay').textContent = c.symbol + c.rate.toLocaleString() + '/SMS';
+            document.getElementById('calcResult').textContent = c.symbol + formatted;
+            document.getElementById('crb-count').textContent = count.toLocaleString();
+            document.getElementById('crb-rate').textContent = c.symbol + c.rate.toLocaleString();
+            document.getElementById('crb-discount').textContent = '-' + discount + '%';
+
+            // Update slider gradient
+            const pct = ((count - 1000) / (500000 - 1000)) * 100;
+            slider.style.background = `linear-gradient(90deg, var(--accent) ${pct}%, rgba(180,95,129,0.2) ${pct}%)`;
+        }
+
+        slider.addEventListener('input', updateCalculator);
+
+        // ===== FAQ Accordion =====
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+
+        // ===== Initialize =====
+        buildOptions(countries);
+        updateCalculator();
+    </script>
+}

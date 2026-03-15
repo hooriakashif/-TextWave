@@ -1,0 +1,1978 @@
+﻿@{
+    ViewData["Title"] = "Blog";
+    ViewData["ActivePage"] = "Blog";
+}
+
+<!-- PAGE HERO -->
+<section class="tw-blog-hero">
+    <div class="tw-grid-overlay"></div>
+    <div class="tw-blob tw-blob-1"></div>
+    <div class="tw-blob tw-blob-2"></div>
+    <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-9 animate-fadeInUp">
+                <div class="tw-eyebrow">
+                    <span class="tw-eyebrow-dot"></span>
+                    TextWave Journal
+                    <span class="tw-eyebrow-dot"></span>
+                </div>
+                <h1 class="tw-blog-h1">
+                    Ideas That Move<br />
+                    <span class="gradient-text">Business Forward</span>
+                </h1>
+                <p class="tw-blog-sub">
+                    Deep dives, case studies and tactical guides on SMS marketing,
+                    automation and growth — written by practitioners, not theorists.
+                </p>
+                <div class="breadcrumb-tw justify-content-center mt-3">
+                    <a href="/">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size:.7rem"></i>
+                    <span>Blog</span>
+                </div>
+                <div class="tw-hero-stats">
+                    <div class="tw-hs"><strong>50+</strong><span>Articles</span></div>
+                    <div class="tw-hs-sep"></div>
+                    <div class="tw-hs"><strong>12K+</strong><span>Readers</span></div>
+                    <div class="tw-hs-sep"></div>
+                    <div class="tw-hs"><strong>Weekly</strong><span>New Posts</span></div>
+                    <div class="tw-hs-sep"></div>
+                    <div class="tw-hs"><strong>6</strong><span>Categories</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORY FILTERS ONLY - NO SEARCH BAR -->
+<section class="tw-filter-bar">
+    <div class="container">
+        <div class="tw-filters reveal">
+            <button class="tw-filter active" onclick="twSetFilter(this,'all')"><i class="fas fa-th-large"></i> All Posts</button>
+            <button class="tw-filter" onclick="twSetFilter(this,'sms')"><i class="fas fa-comment-dots"></i> SMS Marketing</button>
+            <button class="tw-filter" onclick="twSetFilter(this,'tutorial')"><i class="fas fa-graduation-cap"></i> Tutorials</button>
+            <button class="tw-filter" onclick="twSetFilter(this,'industry')"><i class="fas fa-chart-line"></i> Industry News</button>
+            <button class="tw-filter" onclick="twSetFilter(this,'product')"><i class="fas fa-star"></i> Product Updates</button>
+            <button class="tw-filter" onclick="twSetFilter(this,'case')"><i class="fas fa-trophy"></i> Case Studies</button>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED POST -->
+<section class="section-padding-sm" id="twFeaturedSection">
+    <div class="container">
+        <div class="tw-featured-label reveal">
+            <div class="section-tag">Featured Article</div>
+            <div class="tw-label-line"></div>
+        </div>
+        <div class="tw-featured reveal" data-cat="sms">
+            <div class="row align-items-center g-0">
+                <div class="col-lg-5">
+                    <div class="tw-fp-visual">
+                        <div class="tw-fp-blob tw-fp-b1"></div>
+                        <div class="tw-fp-blob tw-fp-b2"></div>
+                        <div class="tw-fp-phone">
+                            <div class="tw-fp-notch"></div>
+                            <div class="tw-fp-screen">
+                                <div class="tw-fp-msg tw-fp-m1"><i class="fas fa-rocket"></i><div><strong>Flash Sale!</strong><span>50% off today only</span></div></div>
+                                <div class="tw-fp-msg tw-fp-m2"><span class="tw-fp-bubble">Use code: <strong>WAVE50</strong></span></div>
+                                <div class="tw-fp-msg tw-fp-m3"><span class="tw-fp-bubble tw-fp-reply">Claimed! 🎉</span></div>
+                                <div class="tw-fp-msg tw-fp-m4"><span class="tw-fp-typing"><span></span><span></span><span></span></span></div>
+                            </div>
+                        </div>
+                        <div class="tw-fp-stat tw-fp-s1"><strong>98%</strong><span>Open Rate</span></div>
+                        <div class="tw-fp-stat tw-fp-s2"><strong>45%</strong><span>CTR</span></div>
+                        <div class="tw-fp-stat tw-fp-s3"><strong>3min</strong><span>Avg Read</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="tw-fp-content">
+                        <div class="d-flex align-items-center gap-3 mb-3 flex-wrap">
+                            <span class="tw-badge tw-b-sms"><i class="fas fa-comment-dots me-1"></i>SMS Marketing</span>
+                            <span class="tw-badge tw-b-featured"><i class="fas fa-fire me-1"></i>Featured</span>
+                        </div>
+                        <h2 class="tw-fp-title">The Ultimate Guide to SMS Marketing in 2025</h2>
+                        <p class="tw-fp-desc">Everything you need to build a high-converting SMS marketing strategy — from list building and segmentation to personalization, automation and compliance. Packed with real data and actionable tactics.</p>
+                        <div class="tw-fp-meta">
+                            <div class="tw-author">
+                                <div class="tw-av tw-av1">JM</div>
+                                <div><strong>James Morgan</strong><span>Mar 10, 2025 · 12 min read</span></div>
+                            </div>
+                            <div class="tw-fp-nums"><span><i class="fas fa-eye"></i> 24.3K</span><span><i class="fas fa-heart"></i> 891</span></div>
+                        </div>
+                        <button class="tw-read-btn" onclick="twOpenArticle('featured')">
+                            <span class="tw-read-label"><i class="fas fa-book-open"></i> Read Full Article</span>
+                            <span class="tw-read-arr"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="section-padding" id="twGridSection">
+    <div class="container">
+        <div class="tw-grid-hdr reveal">
+            <h3 id="twGridTitle">All Articles</h3>
+            <span class="tw-grid-count" id="twGridCount">9 articles</span>
+        </div>
+        <div class="row g-4" id="twGrid">
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-1" data-cat="tutorial">
+                <div class="tw-card" onclick="twOpenArticle(1)">
+                    <div class="tw-card-vis tw-vis-tutorial"><div class="tw-cv-icon"><i class="fas fa-code"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Tutorial</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-tutorial">Tutorial</span>
+                        <h5 class="tw-card-title">How to Integrate TextWave API in 10 Minutes</h5>
+                        <p class="tw-card-desc">A step-by-step walkthrough for developers to get SMS sending up and running with just a few lines of code.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av2">SP</div><div><strong>Sophia Patel</strong><span>Feb 28 · 6 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-2" data-cat="industry">
+                <div class="tw-card" onclick="twOpenArticle(2)">
+                    <div class="tw-card-vis tw-vis-industry"><div class="tw-cv-icon"><i class="fas fa-chart-bar"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Industry</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-industry">Industry News</span>
+                        <h5 class="tw-card-title">SMS vs Email: Which Performs Better in 2025?</h5>
+                        <p class="tw-card-desc">We analyzed over 10 million campaigns to settle the debate once and for all. The results might surprise you.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av3">MK</div><div><strong>Marcus Kim</strong><span>Feb 20 · 8 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-3" data-cat="case">
+                <div class="tw-card" onclick="twOpenArticle(3)">
+                    <div class="tw-card-vis tw-vis-case"><div class="tw-cv-icon"><i class="fas fa-trophy"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Case Study</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-case">Case Study</span>
+                        <h5 class="tw-card-title">How RetailCo Grew Sales 340% with SMS Automation</h5>
+                        <p class="tw-card-desc">Learn exactly how a mid-sized retailer used TextWave to triple their revenue in just 6 months.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av4">AL</div><div><strong>Aisha Larsson</strong><span>Feb 15 · 10 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-1" data-cat="sms">
+                <div class="tw-card" onclick="twOpenArticle(4)">
+                    <div class="tw-card-vis tw-vis-sms"><div class="tw-cv-icon"><i class="fas fa-pen-nib"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">SMS Marketing</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-sms">SMS Marketing</span>
+                        <h5 class="tw-card-title">10 SMS Marketing Strategies That Actually Work</h5>
+                        <p class="tw-card-desc">Learn formulas, power words and psychological triggers that turn 160 characters into serious revenue.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av1">JM</div><div><strong>James Morgan</strong><span>Feb 8 · 5 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-2" data-cat="tutorial">
+                <div class="tw-card" onclick="twOpenArticle(5)">
+                    <div class="tw-card-vis tw-vis-tutorial"><div class="tw-cv-icon"><i class="fas fa-shield-alt"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Tutorial</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-tutorial">Tutorial</span>
+                        <h5 class="tw-card-title">The Ultimate Guide to SMS Compliance, GDPR &amp; TCPA</h5>
+                        <p class="tw-card-desc">Everything you need to stay legally compliant when sending bulk SMS — covering GDPR, TCPA and opt-in rules.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av4">AL</div><div><strong>Aisha Larsson</strong><span>Jan 30 · 7 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-3" data-cat="product">
+                <div class="tw-card" onclick="twOpenArticle(6)">
+                    <div class="tw-card-vis tw-vis-product"><div class="tw-cv-icon"><i class="fas fa-comments"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Product</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-product">Product Update</span>
+                        <h5 class="tw-card-title">TextWave Launches Two-Way SMS Conversations</h5>
+                        <p class="tw-card-desc">Send and receive SMS replies in a unified inbox, automate responses and manage conversations at scale.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av1">JM</div><div><strong>James Morgan</strong><span>Jan 22 · 9 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-1" data-cat="case">
+                <div class="tw-card" onclick="twOpenArticle(7)">
+                    <div class="tw-card-vis tw-vis-case"><div class="tw-cv-icon"><i class="fas fa-shopping-cart"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Case Study</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-case">Case Study</span>
+                        <h5 class="tw-card-title">SMS for E-Commerce — The Complete Playbook 2025</h5>
+                        <p class="tw-card-desc">From cart abandonment to post-purchase follow-ups — the complete SMS strategy for e-commerce brands.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av3">MK</div><div><strong>Marcus Kim</strong><span>Jan 15 · 12 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-2" data-cat="industry">
+                <div class="tw-card" onclick="twOpenArticle(8)">
+                    <div class="tw-card-vis tw-vis-industry"><div class="tw-cv-icon"><i class="fas fa-plug"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Industry</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-industry">Industry News</span>
+                        <h5 class="tw-card-title">Webhooks vs Polling — Real-Time SMS Delivery Explained</h5>
+                        <p class="tw-card-desc">A deep dive into webhooks vs polling for SMS delivery receipts — with benchmarks and code samples.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av2">SP</div><div><strong>Sophia Patel</strong><span>Jan 8 · 9 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post reveal delay-3" data-cat="sms">
+                <div class="tw-card" onclick="twOpenArticle(9)">
+                    <div class="tw-card-vis tw-vis-sms"><div class="tw-cv-icon"><i class="fas fa-users"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">SMS Marketing</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-sms">SMS Marketing</span>
+                        <h5 class="tw-card-title">Build an SMS Subscriber List of 10,000 in 90 Days</h5>
+                        <p class="tw-card-desc">A proven growth playbook for building a highly engaged SMS subscriber list fast using lead magnets and social media.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av4">AL</div><div><strong>Aisha Larsson</strong><span>Jan 2 · 8 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXTRA POSTS hidden initially -->
+            <div class="col-lg-4 col-md-6 tw-post tw-extra reveal delay-1" data-cat="product">
+                <div class="tw-card" onclick="twOpenArticle(10)">
+                    <div class="tw-card-vis tw-vis-product"><div class="tw-cv-icon"><i class="fas fa-chart-pie"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Product</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-product">Product Update</span>
+                        <h5 class="tw-card-title">Introducing Real-Time Analytics Dashboard v2.0</h5>
+                        <p class="tw-card-desc">Track every SMS campaign in real-time with heatmaps, funnels and A/B testing reports.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av2">SP</div><div><strong>Sophia Patel</strong><span>Dec 20 · 6 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post tw-extra reveal delay-2" data-cat="tutorial">
+                <div class="tw-card" onclick="twOpenArticle(11)">
+                    <div class="tw-card-vis tw-vis-tutorial"><div class="tw-cv-icon"><i class="fas fa-key"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Tutorial</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-tutorial">Tutorial</span>
+                        <h5 class="tw-card-title">Sending OTP via SMS — Complete 2FA Implementation Guide</h5>
+                        <p class="tw-card-desc">A complete guide to implementing one-time passwords via SMS for two-factor authentication in your app.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av3">MK</div><div><strong>Marcus Kim</strong><span>Dec 10 · 11 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 tw-post tw-extra reveal delay-3" data-cat="industry">
+                <div class="tw-card" onclick="twOpenArticle(12)">
+                    <div class="tw-card-vis tw-vis-industry"><div class="tw-cv-icon"><i class="fas fa-globe"></i></div><div class="tw-cv-dots"></div><div class="tw-cv-shine"></div><span class="tw-cv-tag">Industry</span></div>
+                    <div class="tw-card-body">
+                        <span class="tw-badge tw-b-industry">Industry News</span>
+                        <h5 class="tw-card-title">Global SMS Market Trends and Predictions for 2025</h5>
+                        <p class="tw-card-desc">The SMS industry is booming. Key trends, statistics and predictions every business should know.</p>
+                        <div class="tw-card-foot"><div class="tw-author-sm"><div class="tw-av tw-av1">JM</div><div><strong>James Morgan</strong><span>Dec 1 · 7 min</span></div></div><span class="tw-card-read">Read <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tw-no-results" id="twNoResults" style="display:none;">
+            <div class="tw-nr-icon"><i class="fas fa-inbox"></i></div>
+            <h4>No articles in this category yet</h4>
+            <p>Check back soon or browse all posts.</p>
+            <button class="btn-outline-tw mt-3" onclick="twResetFilter()"><i class="fas fa-redo"></i> Show All</button>
+        </div>
+
+        <div class="tw-load-wrap" id="twLoadWrap">
+            <button class="tw-load-btn" id="twLoadBtn" onclick="twLoadMore()">
+                <i class="fas fa-plus-circle"></i> Load More Articles <span class="tw-load-badge">+3 more</span>
+            </button>
+            <button class="tw-load-btn tw-show-less" id="twLessBtn" onclick="twShowLess()" style="display:none;">
+                <i class="fas fa-minus-circle"></i> Show Less
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section-padding tw-nl-section">
+    <div class="container">
+        <div class="tw-nl-box reveal">
+            <div class="tw-nl-orb tw-nl-o1"></div>
+            <div class="tw-nl-orb tw-nl-o2"></div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="section-tag mb-3">Newsletter</div>
+                    <h2 class="tw-nl-title">Get SMS Insights Delivered <span class="gradient-text">Every Week</span></h2>
+                    <p class="tw-nl-desc">Join 12,000+ marketers who get our weekly SMS strategy roundup — tips, case studies and industry news.</p>
+                    <div class="tw-nl-perks">
+                        <span><i class="fas fa-check-circle"></i> No spam, ever</span>
+                        <span><i class="fas fa-check-circle"></i> Unsubscribe anytime</span>
+                        <span><i class="fas fa-check-circle"></i> Free resources included</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tw-nl-form">
+                        <input type="email" class="tw-nl-input" id="twNlEmail" placeholder="Enter your email address" />
+                        <button class="tw-nl-submit" onclick="twSubscribe()"><i class="fas fa-paper-plane"></i> Subscribe Free</button>
+                        <p class="tw-nl-note"><i class="fas fa-lock" style="color:#4ade80"></i> We respect your privacy. 100% free, unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ARTICLE READER MODAL -->
+<div class="tw-modal-backdrop" id="twModalBackdrop" onclick="twCloseArticle()"></div>
+<div class="tw-article-modal" id="twArticleModal">
+    <div class="tw-progress-bar" id="twProgressBar"></div>
+    <div class="tw-modal-header">
+        <div class="tw-modal-header-left">
+            <span class="tw-modal-cat" id="twModalCat"></span>
+            <span class="tw-modal-time" id="twModalTime"></span>
+        </div>
+        <button class="tw-modal-close" onclick="twCloseArticle()" title="Close article">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="tw-modal-scroll" id="twModalScroll" onscroll="twUpdateProgress()">
+        <div class="tw-modal-strip" id="twModalStrip"></div>
+        <div class="tw-modal-body">
+            <h1 class="tw-modal-title" id="twModalTitle"></h1>
+            <div class="tw-modal-meta">
+                <div class="tw-author tw-author-lg">
+                    <div class="tw-av" id="twModalAv"></div>
+                    <div>
+                        <strong id="twModalAuthor"></strong>
+                        <span id="twModalDate"></span>
+                    </div>
+                </div>
+                <div class="tw-modal-stats">
+                    <span><i class="fas fa-eye"></i> <span id="twModalViews"></span></span>
+                    <span><i class="fas fa-heart"></i> <span id="twModalLikes"></span></span>
+                </div>
+            </div>
+            <div class="tw-modal-divider"></div>
+            <div class="tw-article-content" id="twArticleContent"></div>
+            <div class="tw-modal-cta" id="twModalCta" style="display:none;">
+                <div class="tw-modal-cta-inner">
+                    <i class="fas fa-unlock tw-cta-icon"></i>
+                    <h4>Enjoyed This Article?</h4>
+                    <p>Create a free TextWave account to save articles, join the community and get weekly SMS insights delivered to your inbox.</p>
+                    <div class="tw-cta-btns">
+                        <a href="/Identity/Account/Register" class="btn-primary-tw justify-content-center"><i class="fas fa-user-plus"></i> Create Free Account</a>
+                        <a href="/Identity/Account/Login" class="btn-outline-tw justify-content-center"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .tw-blog-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--dark-3) 50%, var(--dark-2) 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tw-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(180,95,129,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(180,95,129,0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .tw-blob {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .tw-blob-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(112,25,61,0.2) 0%, transparent 70%);
+            top: -200px;
+            right: -150px;
+            animation: pulse-glow 7s ease-in-out infinite;
+        }
+
+        .tw-blob-2 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(180,95,129,0.12) 0%, transparent 70%);
+            bottom: -100px;
+            left: -80px;
+            animation: pulse-glow 9s ease-in-out infinite 3s;
+        }
+
+        .tw-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(180,95,129,0.1);
+            border: 1px solid rgba(180,95,129,0.25);
+            color: var(--accent-light);
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .tw-eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .tw-blog-h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .tw-blog-sub {
+            color: var(--gray-text);
+            font-size: 1.05rem;
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .tw-hero-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tw-hs {
+            text-align: center;
+        }
+
+            .tw-hs strong {
+                display: block;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 900;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .tw-hs span {
+                color: var(--gray-text);
+                font-size: 0.76rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+            }
+
+        .tw-hs-sep {
+            width: 1px;
+            height: 40px;
+            background: var(--border-color);
+        }
+
+        .tw-filter-bar {
+            padding: 36px 0 0;
+        }
+
+        .tw-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tw-filter {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            color: var(--gray-text);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            font-family: 'Inter', sans-serif;
+        }
+
+            .tw-filter i {
+                font-size: 0.74rem;
+            }
+
+            .tw-filter:hover {
+                border-color: var(--accent);
+                color: var(--accent-light);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(112,25,61,0.2);
+            }
+
+            .tw-filter.active {
+                background: var(--gradient-primary);
+                border-color: transparent;
+                color: var(--white);
+                box-shadow: 0 6px 20px rgba(112,25,61,0.45);
+                transform: translateY(-3px);
+            }
+
+        .tw-featured-label {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tw-label-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(180,95,129,0.4), transparent);
+        }
+
+        .tw-featured {
+            background: linear-gradient(145deg, rgba(112,25,61,0.18), rgba(26,13,19,0.97));
+            border: 1px solid rgba(180,95,129,0.3);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+            .tw-featured:hover {
+                border-color: rgba(180,95,129,0.6);
+                box-shadow: 0 30px 70px rgba(112,25,61,0.3);
+            }
+
+        .tw-fp-visual {
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(112,25,61,0.4), rgba(10,5,8,0.95));
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .tw-fp-blob {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .tw-fp-b1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(112,25,61,0.45) 0%, transparent 70%);
+            top: -120px;
+            right: -120px;
+            animation: pulse-glow 5s ease-in-out infinite;
+        }
+
+        .tw-fp-b2 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(180,95,129,0.2) 0%, transparent 70%);
+            bottom: -80px;
+            left: -60px;
+            animation: pulse-glow 5s ease-in-out infinite 2.5s;
+        }
+
+        .tw-fp-phone {
+            width: 195px;
+            height: 295px;
+            background: linear-gradient(160deg, #200d18, #120608);
+            border: 1.5px solid rgba(180,95,129,0.5);
+            border-radius: 32px;
+            position: relative;
+            z-index: 2;
+            padding: 16px 14px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+
+        .tw-fp-notch {
+            width: 60px;
+            height: 8px;
+            background: rgba(180,95,129,0.3);
+            border-radius: 4px;
+            margin: 0 auto 14px;
+        }
+
+        .tw-fp-screen {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tw-fp-msg {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .tw-fp-m1 {
+            background: var(--gradient-primary);
+            border-radius: 14px 14px 14px 4px;
+            padding: 9px 12px;
+            animation-delay: 0s;
+        }
+
+            .tw-fp-m1 i {
+                color: var(--white);
+                font-size: 0.85rem;
+                flex-shrink: 0;
+            }
+
+            .tw-fp-m1 strong {
+                display: block;
+                color: var(--white);
+                font-size: 0.75rem;
+                font-weight: 700;
+            }
+
+            .tw-fp-m1 span {
+                color: rgba(255,255,255,0.65);
+                font-size: 0.68rem;
+            }
+
+        .tw-fp-bubble {
+            background: rgba(42,21,32,0.95);
+            border: 1px solid rgba(180,95,129,0.2);
+            border-radius: 14px 14px 14px 4px;
+            padding: 8px 12px;
+            color: var(--light-text);
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+
+            .tw-fp-bubble strong {
+                color: var(--accent-light);
+            }
+
+        .tw-fp-reply {
+            background: rgba(74,222,128,0.08);
+            border-color: rgba(74,222,128,0.25);
+            color: #4ade80;
+            border-radius: 14px 14px 4px 14px;
+        }
+
+        .tw-fp-m2 {
+            animation-delay: 0.6s;
+        }
+
+        .tw-fp-m3 {
+            justify-content: flex-end;
+            animation-delay: 1.2s;
+        }
+
+        .tw-fp-typing {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 14px;
+            background: rgba(42,21,32,0.8);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+        }
+
+            .tw-fp-typing span {
+                width: 5px;
+                height: 5px;
+                background: var(--accent-light);
+                border-radius: 50%;
+                animation: tw-dot 1.4s ease-in-out infinite;
+            }
+
+                .tw-fp-typing span:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                .tw-fp-typing span:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+
+        @@keyframes tw-dot {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: .4;
+            }
+
+            30% {
+                transform: translateY(-4px);
+                opacity: 1;
+            }
+        }
+
+        .tw-fp-m4 {
+            animation-delay: 1.8s;
+        }
+
+        .tw-fp-stat {
+            position: absolute;
+            background: rgba(10,5,8,0.92);
+            border: 1px solid rgba(180,95,129,0.35);
+            border-radius: 12px;
+            padding: 10px 16px;
+            text-align: center;
+            z-index: 3;
+            backdrop-filter: blur(12px);
+            animation: float 4s ease-in-out infinite;
+        }
+
+            .tw-fp-stat strong {
+                display: block;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.6rem;
+                font-weight: 900;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1;
+            }
+
+            .tw-fp-stat span {
+                color: var(--gray-text);
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+            }
+
+        .tw-fp-s1 {
+            top: 20px;
+            left: 10px;
+            animation-delay: 0s;
+        }
+
+        .tw-fp-s2 {
+            bottom: 20px;
+            right: 10px;
+            animation-delay: 1s;
+        }
+
+        .tw-fp-s3 {
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            animation-delay: 0.5s;
+        }
+
+        .tw-fp-content {
+            padding: 50px 46px;
+        }
+
+        .tw-fp-title {
+            font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.25;
+            margin: 18px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .tw-fp-desc {
+            color: var(--gray-text);
+            line-height: 1.9;
+            font-size: 0.97rem;
+            margin-bottom: 24px;
+        }
+
+        .tw-fp-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tw-fp-nums {
+            display: flex;
+            gap: 16px;
+            color: var(--gray-text);
+            font-size: 0.85rem;
+        }
+
+            .tw-fp-nums i {
+                color: var(--accent-light);
+                margin-right: 4px;
+            }
+
+        .tw-read-btn {
+            display: inline-flex;
+            align-items: stretch;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 8px 24px rgba(112,25,61,0.45);
+            transition: all 0.3s ease;
+        }
+
+            .tw-read-btn:hover {
+                box-shadow: 0 14px 40px rgba(112,25,61,0.65);
+                transform: translateY(-2px);
+            }
+
+        .tw-read-label {
+            padding: 14px 24px;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .tw-read-arr {
+            background: rgba(0,0,0,0.2);
+            padding: 14px 18px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            border-left: 1px solid rgba(255,255,255,0.15);
+            transition: padding 0.3s ease;
+        }
+
+        .tw-read-btn:hover .tw-read-arr {
+            padding-right: 22px;
+        }
+
+        .tw-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .tw-author strong {
+                display: block;
+                color: var(--white);
+                font-size: 0.88rem;
+                font-weight: 600;
+            }
+
+            .tw-author span {
+                color: var(--gray-text);
+                font-size: 0.78rem;
+            }
+
+        .tw-av {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .tw-av1 {
+            background: linear-gradient(135deg, #70193D, #B45F81);
+        }
+
+        .tw-av2 {
+            background: linear-gradient(135deg, #4e1129, #8a1f4a);
+        }
+
+        .tw-av3 {
+            background: linear-gradient(135deg, #B45F81, #d4a0b5);
+        }
+
+        .tw-av4 {
+            background: linear-gradient(135deg, #70193D, #c97a97);
+        }
+
+        .tw-author-sm {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .tw-author-sm strong {
+                display: block;
+                color: var(--white);
+                font-size: 0.79rem;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .tw-author-sm span {
+                color: var(--gray-text);
+                font-size: 0.72rem;
+            }
+
+        .tw-author-lg .tw-av {
+            width: 44px;
+            height: 44px;
+            font-size: 0.8rem;
+        }
+
+        .tw-grid-hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .tw-grid-hdr h3 {
+                color: var(--white);
+                font-size: 1.3rem;
+                font-weight: 800;
+                margin: 0;
+            }
+
+        .tw-grid-count {
+            background: rgba(180,95,129,0.1);
+            border: 1px solid rgba(180,95,129,0.25);
+            color: var(--accent-light);
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .tw-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+            .tw-card:hover {
+                transform: translateY(-10px) scale(1.015);
+                border-color: rgba(180,95,129,0.5);
+                box-shadow: 0 24px 60px rgba(112,25,61,0.28);
+            }
+
+        .tw-card-vis {
+            height: 175px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tw-cv-icon {
+            font-size: 3.2rem;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        .tw-card:hover .tw-cv-icon {
+            transform: scale(1.15) rotate(-6deg);
+        }
+
+        .tw-cv-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 18px 18px;
+        }
+
+        .tw-cv-shine {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.07) 0%, transparent 65%);
+        }
+
+        .tw-card:hover .tw-cv-shine {
+            opacity: 1;
+        }
+
+        .tw-vis-tutorial {
+            background: linear-gradient(135deg, rgba(79,70,229,0.4), rgba(10,5,8,0.95));
+            color: #818cf8;
+        }
+
+        .tw-vis-industry {
+            background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(10,5,8,0.95));
+            color: #34d399;
+        }
+
+        .tw-vis-case {
+            background: linear-gradient(135deg, rgba(180,83,9,0.4), rgba(10,5,8,0.95));
+            color: #fb923c;
+        }
+
+        .tw-vis-sms {
+            background: linear-gradient(135deg, rgba(112,25,61,0.5), rgba(10,5,8,0.95));
+            color: var(--accent-light);
+        }
+
+        .tw-vis-product {
+            background: linear-gradient(135deg, rgba(14,165,233,0.3), rgba(10,5,8,0.95));
+            color: #38bdf8;
+        }
+
+        .tw-cv-tag {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.65);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .tw-card-body {
+            padding: 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tw-card-title {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.97rem;
+            line-height: 1.5;
+            margin: 10px 0 10px;
+            flex: 1;
+        }
+
+        .tw-card-desc {
+            color: var(--gray-text);
+            font-size: 0.84rem;
+            line-height: 1.75;
+        }
+
+        .tw-card-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(180,95,129,0.08);
+        }
+
+        .tw-card-read {
+            color: var(--accent-light);
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tw-card:hover .tw-card-read {
+            gap: 9px;
+            color: var(--white);
+        }
+
+        .tw-badge {
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.73rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tw-b-sms {
+            background: rgba(112,25,61,0.25);
+            color: var(--accent-light);
+            border: 1px solid rgba(180,95,129,0.3);
+        }
+
+        .tw-b-tutorial {
+            background: rgba(79,70,229,0.15);
+            color: #818cf8;
+            border: 1px solid rgba(79,70,229,0.3);
+        }
+
+        .tw-b-industry {
+            background: rgba(16,185,129,0.12);
+            color: #34d399;
+            border: 1px solid rgba(16,185,129,0.25);
+        }
+
+        .tw-b-case {
+            background: rgba(180,83,9,0.15);
+            color: #fb923c;
+            border: 1px solid rgba(180,83,9,0.25);
+        }
+
+        .tw-b-product {
+            background: rgba(14,165,233,0.12);
+            color: #38bdf8;
+            border: 1px solid rgba(14,165,233,0.25);
+        }
+
+        .tw-b-featured {
+            background: rgba(251,191,36,0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(251,191,36,0.3);
+        }
+
+        .tw-no-results {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .tw-nr-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(180,95,129,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: rgba(180,95,129,0.3);
+        }
+
+        .tw-no-results h4 {
+            color: var(--white);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        .tw-no-results p {
+            color: var(--gray-text);
+            font-size: 0.9rem;
+        }
+
+        .tw-load-wrap {
+            text-align: center;
+            margin-top: 52px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tw-load-btn {
+            background: var(--gradient-card);
+            border: 1.5px solid var(--border-color);
+            color: var(--light-text);
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+            .tw-load-btn:hover {
+                border-color: var(--accent);
+                color: var(--white);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-md);
+            }
+
+        .tw-show-less {
+            border-color: rgba(180,95,129,0.35);
+            color: var(--accent-light);
+        }
+
+        .tw-load-badge {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.73rem;
+            font-weight: 700;
+        }
+
+        .tw-nl-section {
+            background: rgba(42,21,32,0.2);
+        }
+
+        .tw-nl-box {
+            background: linear-gradient(135deg, rgba(112,25,61,0.3), rgba(26,13,19,0.95));
+            border: 1px solid rgba(180,95,129,0.25);
+            border-radius: var(--radius-xl);
+            padding: 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tw-nl-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .tw-nl-o1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(180,95,129,0.1) 0%, transparent 70%);
+            top: -150px;
+            right: -150px;
+        }
+
+        .tw-nl-o2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(112,25,61,0.1) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .tw-nl-title {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .tw-nl-desc {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .tw-nl-perks {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+            .tw-nl-perks span {
+                color: var(--light-text);
+                font-size: 0.84rem;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .tw-nl-perks i {
+                color: #4ade80;
+            }
+
+        .tw-nl-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .tw-nl-input {
+            width: 100%;
+            background: rgba(10,5,8,0.85);
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            color: var(--white);
+            padding: 16px 20px;
+            font-size: 0.95rem;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+            .tw-nl-input::placeholder {
+                color: var(--gray-text);
+            }
+
+            .tw-nl-input:focus {
+                border-color: var(--accent);
+                box-shadow: 0 0 0 3px rgba(180,95,129,0.12);
+            }
+
+        .tw-nl-submit {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--white);
+            padding: 16px 28px;
+            border-radius: var(--radius-xl);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 6px 24px rgba(112,25,61,0.4);
+        }
+
+            .tw-nl-submit:hover {
+                box-shadow: 0 12px 36px rgba(112,25,61,0.6);
+                transform: translateY(-2px);
+            }
+
+        .tw-nl-note {
+            color: var(--gray-text);
+            font-size: 0.82rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+        }
+
+        .tw-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            backdrop-filter: blur(0px);
+            z-index: 9000;
+            display: none;
+            cursor: pointer;
+            transition: background 0.4s ease, backdrop-filter 0.4s ease;
+        }
+
+            .tw-modal-backdrop.tw-open {
+                display: block;
+                background: rgba(0,0,0,0.88);
+                backdrop-filter: blur(14px);
+            }
+
+        .tw-article-modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: min(820px, 100vw);
+            background: linear-gradient(160deg, #110608, #1c0d13, #0d0508);
+            border-left: 1px solid rgba(180,95,129,0.2);
+            z-index: 9100;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+            box-shadow: -30px 0 80px rgba(0,0,0,0.7);
+        }
+
+            .tw-article-modal.tw-open {
+                transform: translateX(0);
+            }
+
+        .tw-progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: var(--gradient-primary);
+            transition: width 0.15s linear;
+            z-index: 10;
+        }
+
+        .tw-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 28px;
+            border-bottom: 1px solid rgba(180,95,129,0.12);
+            flex-shrink: 0;
+            background: rgba(17,6,8,0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .tw-modal-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tw-modal-cat {
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 20px;
+        }
+
+        .tw-modal-time {
+            color: var(--gray-text);
+            font-size: 0.8rem;
+        }
+
+            .tw-modal-time::before {
+                content: '\00B7 ';
+            }
+
+        .tw-modal-close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(180,95,129,0.08);
+            border: 1.5px solid rgba(180,95,129,0.25);
+            color: var(--gray-text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .tw-modal-close::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                border-radius: 50%;
+            }
+
+            .tw-modal-close i {
+                position: relative;
+                z-index: 1;
+                transition: transform 0.4s ease;
+            }
+
+            .tw-modal-close:hover {
+                border-color: transparent;
+                color: var(--white);
+                box-shadow: 0 4px 16px rgba(112,25,61,0.5);
+            }
+
+                .tw-modal-close:hover::before {
+                    opacity: 1;
+                }
+
+                .tw-modal-close:hover i {
+                    transform: rotate(90deg) scale(1.1);
+                }
+
+        .tw-modal-scroll {
+            overflow-y: auto;
+            flex: 1;
+        }
+
+            .tw-modal-scroll::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .tw-modal-scroll::-webkit-scrollbar-thumb {
+                background: rgba(180,95,129,0.4);
+                border-radius: 2px;
+            }
+
+        .tw-modal-strip {
+            height: 5px;
+            flex-shrink: 0;
+        }
+
+        .tw-modal-body {
+            padding: 32px 44px 44px;
+        }
+
+        .tw-modal-title {
+            color: var(--white);
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 28px 0 22px;
+            letter-spacing: -0.02em;
+        }
+
+        .tw-modal-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tw-modal-stats {
+            display: flex;
+            gap: 16px;
+            color: var(--gray-text);
+            font-size: 0.85rem;
+        }
+
+            .tw-modal-stats i {
+                color: var(--accent-light);
+                margin-right: 4px;
+            }
+
+        .tw-modal-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(180,95,129,0.3), transparent);
+            margin: 22px 0;
+        }
+
+        .tw-article-content {
+            color: #c4b0b8;
+            line-height: 1.92;
+            font-size: 0.97rem;
+        }
+
+            .tw-article-content p {
+                margin-bottom: 18px;
+            }
+
+            .tw-article-content h3 {
+                color: var(--white);
+                font-size: 1.2rem;
+                font-weight: 800;
+                margin: 34px 0 14px;
+                padding-left: 16px;
+                border-left: 3px solid var(--accent);
+            }
+
+            .tw-article-content h4 {
+                color: var(--light-text);
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 26px 0 10px;
+            }
+
+            .tw-article-content strong {
+                color: var(--white);
+            }
+
+            .tw-article-content ul {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 18px;
+            }
+
+                .tw-article-content ul li {
+                    padding: 6px 0 6px 24px;
+                    position: relative;
+                }
+
+                    .tw-article-content ul li::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 50%;
+                        background: var(--gradient-primary);
+                    }
+
+            .tw-article-content .ar-stat-box {
+                background: linear-gradient(135deg, rgba(112,25,61,0.2), rgba(42,21,32,0.5));
+                border: 1px solid rgba(180,95,129,0.25);
+                border-radius: 14px;
+                padding: 20px 24px;
+                margin: 24px 0;
+                display: flex;
+                gap: 32px;
+                flex-wrap: wrap;
+            }
+
+            .tw-article-content .ar-stat-item {
+                text-align: center;
+            }
+
+                .tw-article-content .ar-stat-item strong {
+                    display: block;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    background: var(--gradient-primary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1;
+                }
+
+            .tw-article-content .ar-tip {
+                background: rgba(74,222,128,0.06);
+                border: 1px solid rgba(74,222,128,0.2);
+                border-radius: 12px;
+                padding: 16px 20px;
+                margin: 20px 0;
+                display: flex;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .tw-article-content .ar-tip-icon {
+                color: #4ade80;
+                font-size: 1rem;
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+
+            .tw-article-content .ar-tip p {
+                margin: 0;
+                color: #a8d5b5;
+                font-size: 0.9rem;
+            }
+
+            .tw-article-content .ar-code {
+                background: rgba(0,0,0,0.55);
+                border: 1px solid rgba(180,95,129,0.15);
+                border-radius: 10px;
+                padding: 16px 20px;
+                font-family: 'Courier New', monospace;
+                font-size: 0.83rem;
+                color: #e2c4cc;
+                margin: 20px 0;
+                overflow-x: auto;
+                line-height: 1.7;
+            }
+
+        .tw-modal-cta {
+            margin-top: 40px;
+        }
+
+        .tw-modal-cta-inner {
+            background: linear-gradient(135deg, rgba(112,25,61,0.2), rgba(42,21,32,0.7));
+            border: 1px solid rgba(180,95,129,0.25);
+            border-radius: 18px;
+            padding: 36px;
+            text-align: center;
+        }
+
+        .tw-cta-icon {
+            font-size: 2.2rem;
+            color: var(--accent-light);
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .tw-modal-cta-inner h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .tw-modal-cta-inner p {
+            color: var(--gray-text);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .tw-cta-btns {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @@media (max-width: 767px) {
+            .tw-nl-box {
+                padding: 36px 24px;
+            }
+
+            .tw-fp-content {
+                padding: 28px 20px;
+            }
+        }
+
+        @@media (max-width: 768px) {
+            .tw-article-modal {
+                top: auto;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 92vh;
+                border-left: none;
+                border-top: 1px solid rgba(180,95,129,0.2);
+                border-radius: 24px 24px 0 0;
+                transform: translateY(100%);
+            }
+
+                .tw-article-modal.tw-open {
+                    transform: translateY(0);
+                }
+
+            .tw-modal-body {
+                padding: 20px 20px 36px;
+            }
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        (function() {
+            'use strict';
+
+            var isLoggedIn = '@User.Identity.IsAuthenticated.ToString().ToLower()' === 'true';
+
+            var A = {};
+
+            A['featured'] = {
+                cat: 'SMS Marketing', cls: 'tw-b-sms', strip: 'linear-gradient(90deg,#70193D,#B45F81)',
+                title: 'The Ultimate Guide to SMS Marketing in 2025',
+                author: 'James Morgan', av: 'tw-av1', ini: 'JM',
+                date: 'Mar 10, 2025', time: '12 min read', views: '24.3K', likes: '891',
+                html: '<p>SMS marketing is one of the most powerful channels available to businesses today. With open rates of 98% and average response times of 90 seconds, it outperforms every other marketing channel by a significant margin.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>98%</strong><span>Open Rate</span></div><div class="ar-stat-item"><strong>45%</strong><span>Click Rate</span></div><div class="ar-stat-item"><strong>90s</strong><span>Avg Response</span></div><div class="ar-stat-item"><strong>5B+</strong><span>SMS Sent</span></div></div><h3>Why SMS Marketing Works</h3><p>Unlike email, which sits in an inbox competing with hundreds of other messages, SMS lands directly on a screen that your customer checks over 100 times a day. There is no algorithm to beat, no promotions tab to escape. It is the most direct line you have to your customer.</p><h3>Building Your SMS List</h3><ul><li>Website pop-ups with a compelling offer such as 10% off or free shipping</li><li>Keyword opt-in campaigns on social media and in-store</li><li>Checkout opt-in during e-commerce purchase flow</li><li>QR codes in physical locations and print materials</li><li>Cross-channel promotion from email list to SMS list</li></ul><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>A well-timed exit-intent pop-up offering 15% off in exchange for a phone number converts 4 to 8% of website visitors. That is 4 to 8 new SMS subscribers for every 100 visitors to your site.</p></div><h3>The Perfect SMS Formula</h3><ul><li>Open with the value proposition, not your brand name</li><li>Create genuine urgency with a specific deadline</li><li>Include one clear call to action with a link</li><li>Keep it under 160 characters whenever possible</li><li>Always provide an easy opt-out option</li></ul><div class="ar-code">WAVE50: Flash Sale ends midnight. 50% off everything.<br>Shop: textwave.io/sale<br>Reply STOP to unsubscribe.</div><h3>Automation Flows That Drive Revenue</h3><ul><li>Welcome series for new subscribers over 7 days</li><li>Abandoned cart recovery at 1 hour, 24 hours and 72 hours</li><li>Post-purchase follow-up and upsell sequence</li><li>Win-back campaign for lapsed customers</li><li>VIP rewards and early access notifications</li></ul><h3>Compliance and Best Practices</h3><p>SMS marketing is regulated. In the US, the TCPA governs how businesses can send marketing texts. In Europe, GDPR applies. Violating these laws can result in fines of up to $1,500 per message. Always get explicit written consent, honor opt-outs immediately, identify your brand in every message, and send during reasonable hours between 9am and 9pm in the recipient timezone.</p>'
+            };
+
+            A[1] = {
+                cat: 'Tutorial', cls: 'tw-b-tutorial', strip: 'linear-gradient(90deg,#4f46e5,#818cf8)',
+                title: 'How to Integrate TextWave API in 10 Minutes',
+                author: 'Sophia Patel', av: 'tw-av2', ini: 'SP',
+                date: 'Feb 28, 2025', time: '6 min read', views: '18.1K', likes: '542',
+                html: '<p>Getting started with the TextWave API is surprisingly simple. In this tutorial we walk through the complete setup so you can send your first SMS in under 10 minutes.</p><h3>Prerequisites</h3><ul><li>A TextWave account — free tier works fine</li><li>An API key from your dashboard</li><li>Basic understanding of HTTP requests</li></ul><h3>Step 1: Get Your API Key</h3><p>Log into your TextWave dashboard, navigate to Settings then API Keys, and generate a new key. Copy it and keep it safe — treat it like a password. Never commit it to version control.</p><h3>Step 2: Make Your First Request</h3><p>TextWave uses a simple REST API. Send a POST request to the messages endpoint with your API key in the Authorization header, and a JSON body containing the recipient number and message text.</p><div class="ar-code">POST https://api.textwave.io/v1/messages<br>Authorization: Bearer YOUR_API_KEY<br>Content-Type: application/json<br><br>Body: to=+1234567890 message=Hello from TextWave!</div><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Use our official SDK libraries for Python, Node.js, PHP and Ruby to skip raw HTTP requests. They handle authentication, retries and error handling automatically.</p></div><h3>Handling Errors</h3><p>The TextWave API uses standard HTTP status codes. 400 means invalid parameters. 401 means invalid API key. 429 means rate limit hit. Always implement exponential backoff for 429 and 500 errors.</p><h3>Going Further</h3><p>Once basics work, explore webhooks for delivery receipts, the bulk send endpoint for campaigns, and the scheduling API for timed messages. Full documentation is at docs.textwave.io.</p>'
+            };
+
+            A[2] = {
+                cat: 'Industry News', cls: 'tw-b-industry', strip: 'linear-gradient(90deg,#059669,#34d399)',
+                title: 'SMS vs Email: Which Performs Better in 2025?',
+                author: 'Marcus Kim', av: 'tw-av3', ini: 'MK',
+                date: 'Feb 20, 2025', time: '8 min read', views: '31.5K', likes: '1.2K',
+                html: '<p>We analyzed over 10 million campaigns sent through TextWave across 2024. The goal: to definitively settle the SMS vs Email debate with real data.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>98%</strong><span>SMS Open Rate</span></div><div class="ar-stat-item"><strong>21%</strong><span>Email Open Rate</span></div><div class="ar-stat-item"><strong>36%</strong><span>SMS CTR</span></div><div class="ar-stat-item"><strong>2.6%</strong><span>Email CTR</span></div></div><h3>The Headline Numbers</h3><p>The gap is staggering. SMS achieves a 98% open rate versus 21.5% for email. SMS click-through rate of 36% dwarfs email at 2.6%. But raw metrics do not tell the whole story.</p><h3>Revenue Per Message</h3><p>SMS outperformed email by 4.2x on average across retail, hospitality and healthcare. However, email wins on volume economics — cost per email is a fraction of cost per SMS.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>The smartest brands use email for nurturing and content, and SMS for time-sensitive offers. Together they produce 7.2x the revenue of either channel alone.</p></div><h3>When SMS Wins</h3><ul><li>Flash sales and time-limited offers</li><li>Order confirmations and shipping updates</li><li>Appointment reminders</li><li>OTP and two-factor authentication</li><li>Abandoned cart recovery</li></ul><h3>When Email Wins</h3><ul><li>Long-form content and newsletters</li><li>Product catalogs and lookbooks</li><li>Detailed onboarding sequences</li><li>B2B prospecting and follow-up</li></ul><h3>The Verdict</h3><p>SMS wins on engagement. Email wins on content richness and cost. Businesses outperforming their competitors use both channels strategically, letting each do what it does best.</p>'
+            };
+
+            A[3] = {
+                cat: 'Case Study', cls: 'tw-b-case', strip: 'linear-gradient(90deg,#b45309,#fb923c)',
+                title: 'How RetailCo Grew Sales 340% with SMS Automation',
+                author: 'Aisha Larsson', av: 'tw-av4', ini: 'AL',
+                date: 'Feb 15, 2025', time: '10 min read', views: '22.8K', likes: '876',
+                html: '<p>RetailCo is a mid-sized fashion retailer with 12 physical stores and a growing e-commerce presence. In early 2024, they were struggling with declining email engagement and rising ad costs. They turned to TextWave.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>340%</strong><span>Sales Growth</span></div><div class="ar-stat-item"><strong>23%</strong><span>Cart Recovery</span></div><div class="ar-stat-item"><strong>6mo</strong><span>Time to Result</span></div><div class="ar-stat-item"><strong>12x</strong><span>ROI</span></div></div><h3>The Challenge</h3><p>RetailCo email open rates had dropped to 14%, their Facebook ad CPCs had doubled in 18 months, and cart abandonment sat at a painful 78%. They needed a new channel.</p><h3>The Strategy</h3><h4>Part 1: Abandoned Cart Recovery</h4><p>Three messages at 1 hour, 24 hours and 72 hours. The third included a 10% discount code. Result: 23% cart recovery rate, up from 4% with email alone.</p><h4>Part 2: Post-Purchase Upsell</h4><p>Five days after purchase, customers received a personalized recommendation. Result: 31% made a second purchase within 30 days.</p><h4>Part 3: VIP Loyalty Rewards</h4><p>Customers who spent over $500 received early access to new collections 24 hours before the general public. This drove significant word-of-mouth.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>The key insight: personalization was the biggest driver. Generic blast messages performed 6x worse than personalized messages tailored to purchase history.</p></div><h3>Results After 6 Months</h3><ul><li>Total sales up 340% year-over-year</li><li>SMS revenue at 38% of total digital revenue</li><li>Customer lifetime value increased by 67%</li><li>12x return on TextWave subscription cost</li></ul>'
+            };
+
+            A[4] = {
+                cat: 'SMS Marketing', cls: 'tw-b-sms', strip: 'linear-gradient(90deg,#70193D,#B45F81)',
+                title: '10 SMS Marketing Strategies That Actually Work',
+                author: 'James Morgan', av: 'tw-av1', ini: 'JM',
+                date: 'Feb 8, 2025', time: '5 min read', views: '15.7K', likes: '634',
+                html: '<p>With 160 characters, every word in an SMS must earn its place. Here are the 10 strategies that consistently produce results.</p><h3>Strategy 1: Lead with Value, Not Your Brand</h3><p>Do not start with your brand name. Start with the offer. 50% off ends at midnight outperforms Hey it is RetailCo with an exciting offer every single time. Front-load the benefit.</p><h3>Strategy 2: Create Genuine Urgency</h3><p>Time-limited offers work in SMS better than any other channel because the message is read within 3 minutes on average. Use specific deadlines — Ends Sunday 11:59pm converts better than Limited time only.</p><h3>Strategy 3: Personalize Beyond First Name</h3><p>Personalize based on purchase history, browsing behaviour and customer segment. A message referencing the last product someone viewed is 4x more likely to convert.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Reference something specific about the customer in every message. Even something like Based on your last purchase dramatically increases response rates.</p></div><h3>Strategy 4: Optimize Send Time</h3><p>Best times: Tuesday, Wednesday and Thursday between 10am and 12pm, and between 5pm and 7pm. Respect time zones always.</p><h3>Strategy 5: Use Keywords for Easy Interaction</h3><p>Reply YES for 20% off reduces friction and increases engagement dramatically.</p><h3>Strategies 6 Through 10</h3><ul><li>Test your messages with a small segment before full send</li><li>Use short links and always track click-through rates</li><li>Set up automatic follow-up for non-responders</li><li>Integrate SMS with your email and push notification strategy</li><li>Review and optimize every campaign — never set and forget</li></ul>'
+            };
+
+            A[5] = {
+                cat: 'Tutorial', cls: 'tw-b-tutorial', strip: 'linear-gradient(90deg,#4f46e5,#818cf8)',
+                title: 'The Ultimate Guide to SMS Compliance, GDPR and TCPA',
+                author: 'Aisha Larsson', av: 'tw-av4', ini: 'AL',
+                date: 'Jan 30, 2025', time: '7 min read', views: '19.2K', likes: '714',
+                html: '<p>Before you send a single marketing SMS, you need to understand the legal framework. Non-compliance can result in fines of up to $1,500 per message in the US.</p><h3>Key Regulations</h3><ul><li>TCPA (US): Requires express written consent before sending marketing SMS</li><li>GDPR (Europe): Requires explicit consent and right to erasure</li><li>CASL (Canada): Requires express or implied consent</li><li>PECR (UK): Similar to GDPR</li></ul><h3>What Counts as Valid Consent</h3><p>Consent must be clear, unambiguous, documented and freely given. A checkbox that says I agree to receive SMS marketing is the gold standard. The checkbox must not be pre-ticked.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Always keep records of when and how consent was obtained. TextWave automatically logs consent timestamps for all opt-ins through our platform.</p></div><h3>Opt-Out Requirements</h3><p>Every marketing SMS must include an opt-out mechanism. Reply STOP to unsubscribe is legally required in the US. Opt-outs must be processed immediately.</p><h3>Content Restrictions</h3><ul><li>Always identify your brand in every message</li><li>No deceptive content or false urgency</li><li>No marketing to minors</li><li>Send only during permitted hours, 9am to 9pm local time</li></ul>'
+            };
+
+            A[6] = {
+                cat: 'Product Update', cls: 'tw-b-product', strip: 'linear-gradient(90deg,#0369a1,#38bdf8)',
+                title: 'TextWave Launches Two-Way SMS Conversations',
+                author: 'James Morgan', av: 'tw-av1', ini: 'JM',
+                date: 'Jan 22, 2025', time: '9 min read', views: '12.4K', likes: '509',
+                html: '<p>Today we are launching Two-Way SMS. Starting now, you can send messages and receive replies — all within a single unified inbox built directly into TextWave.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>2-Way</strong><span>SMS Live</span></div><div class="ar-stat-item"><strong>100ms</strong><span>Latency</span></div><div class="ar-stat-item"><strong>340%</strong><span>Higher Satisfaction</span></div></div><h3>What is Included</h3><ul><li>Shared team inbox with read receipts and assignment</li><li>Automated reply flows with keyword triggers</li><li>Customer conversation history and timeline</li><li>Full REST API and webhook support</li><li>Mobile app notifications for incoming messages</li></ul><h3>How It Works</h3><p>Each TextWave account gets a dedicated inbound number. When customers reply to your messages, replies appear instantly in your Two-Way inbox. Multiple team members can view and respond, and you can assign conversations to specific agents.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Businesses using Two-Way SMS report 340% higher customer satisfaction scores. Customers who feel heard buy more and churn less.</p></div><h3>Pricing</h3><p>Available on Professional and Enterprise plans starting today. Starter plan users get access in Q2 2025. Inbound messages are free — you only pay for messages you send.</p>'
+            };
+
+            A[7] = {
+                cat: 'Case Study', cls: 'tw-b-case', strip: 'linear-gradient(90deg,#b45309,#fb923c)',
+                title: 'SMS for E-Commerce — The Complete Playbook 2025',
+                author: 'Marcus Kim', av: 'tw-av3', ini: 'MK',
+                date: 'Jan 15, 2025', time: '12 min read', views: '28.9K', likes: '1.1K',
+                html: '<p>E-commerce brands that add SMS see an average revenue lift of 20 to 30 percent within the first 90 days. This playbook documents exactly how to capture that uplift.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>28%</strong><span>Revenue Lift</span></div><div class="ar-stat-item"><strong>23%</strong><span>Cart Recovery</span></div><div class="ar-stat-item"><strong>40%</strong><span>Fewer Tickets</span></div></div><h3>The 4 SMS Flows Every Store Needs</h3><h4>Flow 1: Abandoned Cart Recovery</h4><p>Send three messages: at 1 hour, 24 hours and 72 hours. Add 10% discount in the third. Average recovery rate: 15 to 23 percent.</p><h4>Flow 2: Order and Shipping Updates</h4><p>Proactively sending SMS updates reduces support tickets by 40 percent and increases satisfaction dramatically.</p><h4>Flow 3: Post-Purchase Upsell</h4><p>Five days after delivery, send a personalized recommendation. Brands using this flow see 28 percent repeat purchase rates within 30 days.</p><h4>Flow 4: Win-Back Campaign</h4><p>Target customers who have not purchased in 90 days. A simple We miss you message with 15% off brings back 12 to 18 percent of lapsed customers.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>The abandoned cart flow is the highest-ROI automation for e-commerce. If you implement nothing else from this guide, implement that first.</p></div>'
+            };
+
+            A[8] = {
+                cat: 'Industry News', cls: 'tw-b-industry', strip: 'linear-gradient(90deg,#059669,#34d399)',
+                title: 'Webhooks vs Polling — Real-Time SMS Delivery Explained',
+                author: 'Sophia Patel', av: 'tw-av2', ini: 'SP',
+                date: 'Jan 8, 2025', time: '9 min read', views: '11.3K', likes: '398',
+                html: '<p>When building SMS delivery tracking into your app, you face a fundamental question: should you use webhooks (push) or polling (pull) to receive delivery receipts?</p><h3>Understanding Polling</h3><p>With polling, your server repeatedly asks the API whether delivery receipts have arrived on a fixed interval. Simple to implement, but it creates unnecessary API calls and introduces latency.</p><div class="ar-code">Polling every 30 seconds:<br>GET /v1/messages/status?after=lastCheck<br>Result: 2880 API calls per day, 15s average latency</div><h3>Understanding Webhooks</h3><p>With webhooks, TextWave pushes delivery receipt events to your endpoint the moment they occur. Near-zero latency, no wasted API calls, and infinitely scalable.</p><div class="ar-code">Webhook endpoint receives:<br>POST /webhooks/sms-delivery<br>Body: messageId, status, timestamp<br>Result: 0 polling calls, 80ms average latency</div><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Always return a 200 response immediately from your webhook handler, then process the event asynchronously to avoid duplicate processing on retry.</p></div><h3>Benchmark Comparison</h3><ul><li>Polling at 30s interval: 15s avg latency, 2,880 API calls per day</li><li>Polling at 5s interval: 2.5s avg latency, 17,280 API calls per day</li><li>Webhooks: 0.08s avg latency, zero polling API calls</li></ul><h3>The Verdict</h3><p>Use webhooks. Always. For any production system, webhooks are faster, cheaper and more reliable than polling in every measurable dimension.</p>'
+            };
+
+            A[9] = {
+                cat: 'SMS Marketing', cls: 'tw-b-sms', strip: 'linear-gradient(90deg,#70193D,#B45F81)',
+                title: 'Build an SMS Subscriber List of 10,000 in 90 Days',
+                author: 'Aisha Larsson', av: 'tw-av4', ini: 'AL',
+                date: 'Jan 2, 2025', time: '8 min read', views: '17.6K', likes: '723',
+                html: '<p>The hardest part of SMS marketing is not sending messages — it is building a quality list of subscribers who actually want to hear from you.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>10K</strong><span>Target Subs</span></div><div class="ar-stat-item"><strong>90</strong><span>Days</span></div><div class="ar-stat-item"><strong>4-8%</strong><span>Popup CVR</span></div></div><h3>Channel 1: Website Pop-Ups</h3><p>A well-timed SMS opt-in pop-up triggered at exit intent or after 60 seconds can convert 4 to 8 percent of visitors. The offer is everything. 15% off your first order outperforms Join our SMS list by a factor of 10.</p><h3>Channel 2: Social Media</h3><p>Run campaigns on Instagram and TikTok with SMS as the primary call to action. Text SAVE to 12345 for exclusive weekly deals is trackable and converts social audiences into owned contacts.</p><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Paid social to SMS opt-in can acquire subscribers for $1 to $3 each — subscribers who generate $18 to $45 in lifetime revenue on average.</p></div><h3>Channel 3: In-Store</h3><p>QR codes at checkout, on receipts and at entrance displays drive significant opt-ins from physical retail customers.</p><h3>Channel 4: Cross-Channel Promotion</h3><p>Promote your SMS list to existing email subscribers. A dedicated email typically converts 5 to 15 percent of email subscribers into SMS subscribers.</p><h3>The 90-Day Breakdown</h3><ul><li>Month 1: Pop-ups and social launch — target 2,500 subscribers</li><li>Month 2: Add paid social and email cross-promotion — target 6,000 total</li><li>Month 3: Add in-store and optimize all channels — target 10,000 total</li></ul>'
+            };
+
+            A[10] = {
+                cat: 'Product Update', cls: 'tw-b-product', strip: 'linear-gradient(90deg,#0369a1,#38bdf8)',
+                title: 'Introducing Real-Time Analytics Dashboard v2.0',
+                author: 'Sophia Patel', av: 'tw-av2', ini: 'SP',
+                date: 'Dec 20, 2024', time: '6 min read', views: '9.8K', likes: '412',
+                html: '<p>After 6 months of development and beta testing with over 500 customers, we are thrilled to launch Analytics Dashboard v2.0 — a complete rebuild of how you understand your SMS campaigns.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>v2.0</strong><span>New Dashboard</span></div><div class="ar-stat-item"><strong>Real-Time</strong><span>Data</span></div><div class="ar-stat-item"><strong>A/B</strong><span>Testing</span></div></div><h3>What is New</h3><ul><li>Real-time delivery heatmaps showing when and where messages are opened</li><li>Campaign-level A/B testing with statistical significance scoring</li><li>Revenue attribution tracking from SMS click to purchase</li><li>Funnel visualization from send through click to conversion</li><li>Custom dashboard builder with drag and drop</li><li>API access to all analytics data for your BI tools</li></ul><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Revenue attribution data from beta customers shows SMS drives 3 to 5 times more revenue than previously measurable. Many businesses have been undervaluing their SMS investment.</p></div><h3>How to Access</h3><p>Dashboard v2.0 is live for all paid accounts now. Log into your TextWave dashboard and you will see the new interface automatically. All historical data has been migrated.</p>'
+            };
+
+            A[11] = {
+                cat: 'Tutorial', cls: 'tw-b-tutorial', strip: 'linear-gradient(90deg,#4f46e5,#818cf8)',
+                title: 'Sending OTP via SMS — Complete 2FA Implementation Guide',
+                author: 'Marcus Kim', av: 'tw-av3', ini: 'MK',
+                date: 'Dec 10, 2024', time: '11 min read', views: '22.1K', likes: '891',
+                html: '<p>Two-factor authentication via SMS OTP is one of the most widely deployed security patterns on the web. In this guide we implement it from scratch using the TextWave API.</p><h3>How SMS OTP Works</h3><ul><li>User enters their phone number or triggers 2FA</li><li>Your server generates a cryptographically random 6-digit code</li><li>Code is stored with a 5-minute expiry and max 3 attempts</li><li>Code is sent via TextWave SMS API</li><li>User enters the code on your app</li><li>Your server validates code, expiry and attempt count</li></ul><h3>Generating a Secure OTP</h3><div class="ar-code">Node.js example:<br>var crypto = require("crypto");<br>function generateOTP() {<br>  var buf = crypto.randomBytes(4);<br>  var num = buf.readUInt32BE(0);<br>  return String(num % 1000000).padStart(6, "0");<br>}</div><h3>Sending the OTP</h3><div class="ar-code">var otp = generateOTP();<br>storeOTP(userId, otp, Date.now() + 300000);<br>textwave.send({ to: phone, message: "Your code: " + otp + ". Valid 5 min. Never share." });</div><div class="ar-tip"><i class="fas fa-lightbulb ar-tip-icon"></i><p>Always include Never share this code in your OTP message. This protects users from social engineering attacks where fraudsters impersonate support staff.</p></div><h3>Security Best Practices</h3><ul><li>Rate limit OTP requests per phone number, max 3 per hour</li><li>Rate limit validation attempts, max 3 per code</li><li>Never log OTP values anywhere</li><li>Use HTTPS for all API calls</li><li>Set expiry windows of 5 minutes maximum</li><li>Invalidate the code immediately after successful use</li></ul>'
+            };
+
+            A[12] = {
+                cat: 'Industry News', cls: 'tw-b-industry', strip: 'linear-gradient(90deg,#059669,#34d399)',
+                title: 'Global SMS Market Trends and Predictions for 2025',
+                author: 'James Morgan', av: 'tw-av1', ini: 'JM',
+                date: 'Dec 1, 2024', time: '7 min read', views: '14.2K', likes: '567',
+                html: '<p>The global SMS market is projected to reach $98.4 billion by 2026, growing at a CAGR of 4.5 percent. The real transformation is in how businesses are using SMS — and it is changing rapidly.</p><div class="ar-stat-box"><div class="ar-stat-item"><strong>$98B</strong><span>Market by 2026</span></div><div class="ar-stat-item"><strong>4.5%</strong><span>Annual Growth</span></div><div class="ar-stat-item"><strong>5B+</strong><span>Users Worldwide</span></div></div><h3>Trend 1: Conversational SMS Replacing Broadcast SMS</h3><p>The biggest shift is from one-way broadcasting to two-way conversation. Businesses that have adopted conversational SMS report 340% higher engagement rates.</p><h3>Trend 2: AI-Powered Personalization at Scale</h3><p>SMS messages that adapt in real-time based on customer behaviour, purchase history and preferences. Early adopters are seeing 6 to 8x higher conversion rates.</p><h3>Trend 3: SMS and Rich Communication Services</h3><p>RCS is the next evolution of SMS, enabling images, buttons, carousels and interactive elements within the native messaging app. Brands with strong SMS competencies will be first movers.</p><h3>Predictions for 2025</h3><ul><li>AI-personalized SMS will become standard for top-tier e-commerce brands</li><li>RCS adoption will surpass 50 percent of Android users globally</li><li>SMS will surpass email in total marketing ROI for retail</li><li>Compliance requirements will tighten further in the US and EU</li><li>Conversational commerce via SMS will emerge as a major revenue channel</li></ul>'
+            };
+
+            window.twOpenArticle = function(id) {
+                var a = A[id];
+                if (!a) return;
+                var catEl = document.getElementById('twModalCat');
+                catEl.textContent = a.cat;
+                catEl.className = 'tw-modal-cat tw-badge ' + a.cls;
+                document.getElementById('twModalStrip').style.background = a.strip;
+                document.getElementById('twModalTime').textContent = a.time;
+                document.getElementById('twModalTitle').textContent = a.title;
+                document.getElementById('twModalAuthor').textContent = a.author;
+                document.getElementById('twModalDate').textContent = a.date;
+                document.getElementById('twModalViews').textContent = a.views;
+                document.getElementById('twModalLikes').textContent = a.likes;
+                var av = document.getElementById('twModalAv');
+                av.textContent = a.ini;
+                av.className = 'tw-av ' + a.av;
+                document.getElementById('twArticleContent').innerHTML = a.html;
+                document.getElementById('twModalCta').style.display = isLoggedIn ? 'none' : 'block';
+                document.getElementById('twModalScroll').scrollTop = 0;
+                document.getElementById('twProgressBar').style.width = '0%';
+                document.getElementById('twModalBackdrop').classList.add('tw-open');
+                document.getElementById('twArticleModal').classList.add('tw-open');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.twCloseArticle = function() {
+                document.getElementById('twModalBackdrop').classList.remove('tw-open');
+                document.getElementById('twArticleModal').classList.remove('tw-open');
+                document.body.style.overflow = '';
+            };
+
+            window.twUpdateProgress = function() {
+                var el = document.getElementById('twModalScroll');
+                var pct = el.scrollHeight - el.clientHeight > 0 ? (el.scrollTop / (el.scrollHeight - el.clientHeight)) * 100 : 0;
+                document.getElementById('twProgressBar').style.width = Math.min(pct, 100) + '%';
+            };
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') window.twCloseArticle();
+            });
+
+            var twFilter = 'all';
+            var twExtras = false;
+
+            window.twSetFilter = function(btn, cat) {
+                document.querySelectorAll('.tw-filter').forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                twFilter = cat;
+                twApply();
+            };
+
+            window.twResetFilter = function() {
+                window.twSetFilter(document.querySelector('.tw-filter'), 'all');
+            };
+
+            function twApply() {
+                var posts = document.querySelectorAll('.tw-post');
+                var fs = document.getElementById('twFeaturedSection');
+                var fp = document.querySelector('.tw-featured');
+                var fpMatch = twFilter === 'all' || (fp && fp.getAttribute('data-cat') === twFilter);
+                fs.style.display = fpMatch ? '' : 'none';
+                var vis = 0;
+                posts.forEach(function(p) {
+                    var extra = p.classList.contains('tw-extra');
+                    var match = twFilter === 'all' || p.getAttribute('data-cat') === twFilter;
+                    if (match) {
+                        vis++;
+                        p.style.display = extra ? (twExtras ? '' : 'none') : '';
+                    } else {
+                        p.style.display = 'none';
+                    }
+                });
+                document.getElementById('twNoResults').style.display = (vis === 0 && !fpMatch) ? 'block' : 'none';
+                var abt = document.querySelector('.tw-filter.active').textContent.trim();
+                document.getElementById('twGridTitle').textContent = twFilter === 'all' ? 'All Articles' : abt;
+                document.getElementById('twGridCount').textContent = vis + ' articles';
+                twBtns();
+            }
+
+            function twBtns() {
+                var extras = document.querySelectorAll('.tw-extra');
+                var any = false;
+                extras.forEach(function(e) { if (twFilter === 'all' || e.getAttribute('data-cat') === twFilter) any = true; });
+                document.getElementById('twLoadWrap').style.display = any ? 'flex' : 'none';
+                document.getElementById('twLoadBtn').style.display = twExtras ? 'none' : 'flex';
+                document.getElementById('twLessBtn').style.display = twExtras ? 'flex' : 'none';
+            }
+
+            window.twLoadMore = function() {
+                twExtras = true;
+                document.querySelectorAll('.tw-extra').forEach(function(p) {
+                    if (twFilter === 'all' || p.getAttribute('data-cat') === twFilter) {
+                        p.style.display = '';
+                        p.style.opacity = '0';
+                        p.style.transform = 'translateY(24px)';
+                        setTimeout(function() {
+                            p.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                            p.style.opacity = '1';
+                            p.style.transform = 'translateY(0)';
+                        }, 50);
+                    }
+                });
+                twBtns();
+            };
+
+            window.twShowLess = function() {
+                twExtras = false;
+                document.querySelectorAll('.tw-extra').forEach(function(p) { p.style.display = 'none'; });
+                twBtns();
+                document.getElementById('twGridSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
+            window.twSubscribe = function() {
+                var email = document.getElementById('twNlEmail').value.trim();
+                var atSign = String.fromCharCode(64);
+                var atPos = email.indexOf(atSign);
+                var dotPos = email.lastIndexOf('.');
+                var validEmail = email.length > 5 && atPos > 0 && dotPos > atPos + 1 && dotPos < email.length - 1;
+                if (!validEmail) {
+                    showToast('Please enter a valid email address.', 'error');
+                    document.getElementById('twNlEmail').focus();
+                    return;
+                }
+                var btn = document.querySelector('.tw-nl-submit');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+                btn.disabled = true;
+                setTimeout(function() {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                    btn.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
+                    showToast('Welcome to the TextWave community! Check your inbox.', 'success');
+                    document.getElementById('twNlEmail').value = '';
+                    setTimeout(function() {
+                        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Subscribe Free';
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                }, 1500);
+            };
+
+            document.querySelectorAll('.tw-extra').forEach(function(p) { p.style.display = 'none'; });
+            twBtns();
+
+        })();
+    </script>
+}
